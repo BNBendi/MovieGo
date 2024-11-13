@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regisztráció</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./regisztracio.css">
+    <script src="./regisztracio.js" defer></script> 
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Regisztráció</h5>
+                        <form id="registration-form">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email-cím</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email-cím">
+                            </div>
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Felhasználónév</label>
+                                <input type="text" class="form-control" id="username" placeholder="Felhasználónév">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label password">Jelszó</label>
+                                <input type="password" class="form-control" id="password" placeholder="Jelszó">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label password-again">Jelszó újra</label>
+                                <input type="password" class="form-control" id="password-again" placeholder="Jelszó újra">
+                            </div>
+                            <div class="mb-3">
+                                <label for="date" class="form-label">Születési dátum</label>
+                                <input type="date" class="form-control" id="date" placeholder="Születési dátum">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Regisztráció</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <p>Már van fiókod? <a href="./bejelentkezes.html">Jelentkezz be!</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="regisztracio.js"></script> 
+</body>
+</html>

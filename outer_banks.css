@@ -1,0 +1,129 @@
+/* Alap beállítások */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(100, 27, 27);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* A kártya tárolója */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Maga a kártya */
+.card {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    border: 1px solid rgb(100, 27, 27);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgb(100, 27, 27);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
+}
+
+.card-cover {
+    display: flex;
+    flex: 0 0 40%;
+    max-width: 500px;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.card-cover img {
+    width: 100%!important;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-content {
+    flex: 1 1 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-rate {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.card-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__list {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.9rem;
+    color: #a3a3a3;
+}
+
+.card-meta {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    color: #a3a3a3;
+}
+
+.card-meta li {
+    margin-bottom: 5px;
+}
+
+.card-meta span {
+    font-weight: bold;
+}
+
+.card-meta a {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.card-meta a:hover {
+    text-decoration: underline;
+}
+
+.card-text {
+    line-height: 1.5;
+    font-weight: 400;
+    color: rgb(173, 170, 170);
+}
+
+/* Video container */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    border: 1px solid rgb(100, 27, 27);  
+    border-radius: 8px;  
+    background-color: rgb(71, 71, 71); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+.video-container iframe {
+    width: 100%;
+    height: 450px; 
+    border-radius: 8px;  
+    object-fit: cover; 
+}
