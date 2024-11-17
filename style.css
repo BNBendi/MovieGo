@@ -194,7 +194,7 @@ max-height: 100vh;
 }
 
 /* A lejátszó ikon pozicionálása */
-.new-upload-container .card-play {
+.imiges .card1 .card-play {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -212,12 +212,12 @@ max-height: 100vh;
 }
 
 /* A hover effekt, amikor a kép fölé viszed az egeret */
-.new-upload-container:hover .card-play {
+.imiges:hover .card1 .card-play {
     opacity: 1; /* Megjeleníti a videó ikont, amikor a konténer fölé húzod az egeret */
 }
 
 /* Az SVG ikont fehérre színezzük és a megfelelő méretet állítjuk be */
-.new-upload-container .card-play svg {
+.imiges .card-play .card1 svg {
     fill: #fff;
     width: 24px;
     height: 24px;
@@ -247,6 +247,92 @@ max-height: 100vh;
 .imiges img + img {
     margin-left: 0; 
 }
+.section .row{
+    background-color: #1c1c1c;
+}
+.col12{
+    background-color: #1c1c1c; 
+    color: #fff; 
+    padding: 20px;
+    text-align: left;
+    position: relative;
+}
+.col12::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, #ff007a, #ff8a00);    
+}
+.col-4 img{
+    width: 100px;
+    border-radius: 50px;
+    margin-left: 10px; ;
+    padding-bottom: 10px;
+}
+footer {
+    width: 100%; /* Teljes szélesség */
+    background-color: #1c1c1c; /* Háttérszín */
+    color: #fff;
+    padding: 20px 0;
+    position: relative; /* A pseudo-element helyzetének alapja */
+}
 
+footer .row{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    position: relative; /* Szükséges a ::before pseudo-element pozicionálásához */
+    box-sizing: border-box; /* A padding ne növelje a szélességet */
+}
 
-/*Egy-két dolgot kijavítottam,kb ilyen legyen majd a többi is NBG */
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%; /* A széltől-szélig megjelenítés */
+    background: linear-gradient(to right, #ff007a, #ff8a00); /* Színátmenet */
+}
+
+footer .container {
+    max-width: 1200px; /* Tartalom maximális szélessége */
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer .column {
+    flex: 1;
+    min-width: 200px;
+}
+
+footer h5 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+footer a {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    color: #ffffff;
+}
+    

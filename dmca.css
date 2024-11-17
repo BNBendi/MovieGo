@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #1c1c1c;
+}
+.container {
+    position: relative;
+    width: 100%; /* Teljes szélesség */
+    margin: auto; /* Középre helyezés */
+    overflow: hidden; /* Biztosítja, hogy semmi ne lógjon ki */
+}
+
+.image-wrap {
+    position: relative; /* A szöveg pozicionálásához szükséges */
+}
+
+.image-wrap img {
+    width: 100%; /* A kép teljes szélességet kitölti */
+    height: 300px; /* Fix magasság */
+    display: block; /* Blokkszintű elem a pontos igazításhoz */
+}
+
+.overlay {
+    position: absolute; /* A szöveg pozicionálása a kép felett */
+    top: 0; /* Szöveg pozíciója a kép tetején */
+    left: 0; /* Szöveg balra igazítva */
+    width: 100%; /* A szöveg overlay kitölti a kép szélességét */
+    height: 100%; /* Kitölti a kép magasságát */
+    display: flex; /* Középre helyezéshez használjuk */
+    align-items: center; /* Vertikális középre igazítás */
+    justify-content: flex-start; /* Balra igazítás */
+    padding-left: 20px; /* Bal oldali távolság a szöveghez */
+    background: rgba(0, 0, 0, 0.5); /* Átlátszó fekete háttér a szöveg mögött */
+    color: #fff; /* Szöveg fehér */
+    font-size: 2rem; /* Szövegméret */
+    font-weight: bold; /* Szöveg kiemelése */
+    text-transform: uppercase; /* Nagybetűssé alakítás */
+}
+
+.catalog {
+    text-align: center; /* Szöveg középre igazítása */
+    color: #fff; /* Szöveg színe fehér */
+    background-color: #1c1c1c; /* Háttérszín */
+    padding: 20px; /* Külső margó a tartalom körül */
+    padding: 20px;
+    text-align: left;
+    position: relative;
+}
+.catalog::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, #ff007a, #ff8a00); 
+}
+
+.catalog h2 {
+    font-size: 2.5rem; /* Nagyobb betűméret a főcímnek */
+    margin-bottom: 20px; /* Térköz az alcím előtt */
+    background-color: #1c1c1c; 
+    color: #fff; 
+    
+}
+
+.catalog h3 {
+    font-size: 1.5rem; /* Alcím mérete */
+    margin-bottom: 20px; /* Térköz a bekezdések előtt */
+    text-align: left;
+}
+
+.catalog p {
+    font-size: 1rem; /* Szöveg betűmérete */
+    line-height: 1.6; /* Sorok közötti tér */
+    margin-bottom: 20px; /* Térköz a bekezdések között */
+    color: #fff; /* Szöveg színe fehér */
+    text-align: left;
+}
+
+.catalog .container {
+    max-width: 800px; /* Tartalom maximális szélessége */
+    margin: 0 auto; /* Középre igazítás */
+}
+
+.section .row{
+    background-color: #1c1c1c;
+}
+.col12{
+    background-color: #1c1c1c; 
+    color: #fff; 
+    padding: 20px;
+    text-align: left;
+    position: relative;
+}
+.col12::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, #ff007a, #ff8a00);    
+}
+
+.col-4 img{
+    width: 100px;
+    border-radius: 50px;
+    margin-left: 10px; ;
+    padding-bottom: 10px;
+}
+footer {
+    width: 100%; /* Teljes szélesség */
+    background-color: #1c1c1c; /* Háttérszín */
+    color: #fff;
+    padding: 20px 0;
+    position: relative; /* A pseudo-element helyzetének alapja */
+}
+
+footer .row{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    position: relative; /* Szükséges a ::before pseudo-element pozicionálásához */
+    box-sizing: border-box; /* A padding ne növelje a szélességet */
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%; /* A széltől-szélig megjelenítés */
+    background: linear-gradient(to right, #ff007a, #ff8a00); /* Színátmenet */
+}
+
+footer .container {
+    max-width: 1200px; /* Tartalom maximális szélessége */
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer .column {
+    flex: 1;
+    min-width: 200px;
+}
+
+footer h5 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+footer a {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    color: #ffffff;
+}
+    
