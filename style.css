@@ -6,7 +6,7 @@
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: hsl(357, 79%, 17%);
+    background-color: hsl(0, 0%, 0%);
 }
 
 /*************/
@@ -110,10 +110,21 @@ nav li a {
 main {
     background-color: darkgrey;
 }
-main h1 {
-    color: white;
-    text-align: center;
-    font-size: 2rem;
+main h1{
+    background-color: #1c1c1c; 
+    color: #fff; 
+    padding: 20px;
+    text-align: left;
+    position: relative;
+}
+main h1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, #ff007a, #ff8a00);    
 }
 
 /**********/
