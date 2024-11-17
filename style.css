@@ -22,6 +22,12 @@ nav {
     justify-content: center;
     background-color: black;
 }
+#MovieGO{
+    height: 100px;
+    width: 150px;
+    
+    float: left;
+}
 
 nav li {
     padding: 10px;
