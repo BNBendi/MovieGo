@@ -20,13 +20,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: rgb(31, 30, 30);
 }
 #MovieGO{
-    height: 100px;
-    width: 150px;
-    
-    float: left;
+   max-width: 100px;
+   float: left;
+   margin-right: 60px;
+   border-radius:700px;
 }
 
 nav li {
