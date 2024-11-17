@@ -9,6 +9,105 @@ body {
     background-color: rgb(100, 27, 27);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+/*Navbar*/
+nav {
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(31, 30, 30);
+}
+#MovieGO{
+   max-width: 100px;
+   float: left;
+   margin-right: 60px;
+   border-radius:700px;
+}
+
+nav li {
+    padding: 10px;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+#main_page {
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+#main_page:hover {
+    color: black;
+    transform: scale(.90);
+}
+
+#blue {
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+
+#blue:hover {
+    color: blue;
+    transform: scale(.90);
+}
+
+#red {
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+#red:hover {
+    color: red;
+    transform: scale(.90);
+}
+
+#blue_and_white {
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+#blue_and_white:hover {
+    color: rgb(26, 26, 179);
+    transform: scale(.90);
+}
+
+#copyright {
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+#copyright:hover {
+    color: yellow;
+    transform: scale(.90);
+}
+
+#purple_and_pink {
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+#purple_and_pink:hover {
+    color: rgb(161, 38, 161);
+    transform: scale(.90);
+}
+
+#pink {
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+#pink:hover {
+    color: pink;
+    transform: scale(.90);
+}
+
+.buttons button {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: black !important;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+
+.buttons button:hover {
+    color: red;
+    transform: scale(.90);
+}
+
+/**************/
 
 /* A kártya tárolója */
 .container {
