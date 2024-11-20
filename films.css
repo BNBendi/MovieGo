@@ -1,0 +1,341 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(48, 47, 47);
+}
+
+/*Header*/
+
+header{
+    background-image: url(./img/headerPic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    height: 40vh;
+    text-align: center;
+    color: white;
+}
+header h1{
+    font-size: 100px;
+}
+
+.kategoriak{
+    height: 5vh;
+    background-color: rgb(31, 30, 30);
+}
+
+.csik{
+    height: 3px;
+    background: linear-gradient(to right, #ff007a, #ff8a00);    
+}
+
+/*Navbar*/
+nav {
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(31, 30, 30);
+}
+#MovieGO{
+   max-width: 100px;
+   float: left;
+   margin-right: 60px;
+   border-radius:700px;
+}
+
+nav li {
+    padding: 10px;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+#main_page {
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+#main_page:hover {
+    color: black;
+    transform: scale(.90);
+}
+
+#blue {
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+
+#blue:hover {
+    color: blue;
+    transform: scale(.90);
+}
+
+#red {
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+#red:hover {
+    color: red;
+    transform: scale(.90);
+}
+
+#blue_and_white {
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+#blue_and_white:hover {
+    color: rgb(26, 26, 179);
+    transform: scale(.90);
+}
+
+#copyright {
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+#copyright:hover {
+    color: yellow;
+    transform: scale(.90);
+}
+
+#purple_and_pink {
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+#purple_and_pink:hover {
+    color: rgb(161, 38, 161);
+    transform: scale(.90);
+}
+
+#pink {
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+#pink:hover {
+    color: pink;
+    transform: scale(.90);
+}
+
+.buttons button {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: black !important;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+
+.buttons button:hover {
+    color: red;
+    transform: scale(.90);
+}
+
+/*kategoriak*/
+
+.dropdowns {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  
+.dropdown label {
+    margin-right: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff8a00;
+  }
+  
+.custom-dropdown {
+    position: relative;
+    width: 200px;
+  }
+  
+.dropdown-selected {
+    background: linear-gradient(to right, #444, #222);
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+  }
+  
+  .dropdown-selected:hover {
+    background: linear-gradient(to right, #ff8a00, #ff4500);
+    -webkit-background-clip: text;
+    color: transparent; 
+}
+  
+.dropdown-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #333;
+    border: 1px solid #555;
+    border-radius: 6px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
+    z-index: 1000;
+  }
+  
+.dropdown-options li {
+    padding: 10px 15px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+.dropdown-options li:hover {
+    background-color: #444;
+    color: #ff8a00;
+  }
+
+#dropdown{
+    display: flex;
+    flex-direction: row;
+  }
+
+.li-csik{
+    border-radius: 30%;
+}
+
+.popular-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap; /* Az elemek rugalmas elrendezéséhez */
+}
+
+.card {
+    position: relative;
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    transition: transform 0.3s ease;
+    flex: 1 1 calc(33.33% - 20px); /* A kártyák szélességét 33%-ra csökkentjük */
+    max-width: 300px; /* Max szélesség 33%-ra állítva */
+    margin-bottom: 20px; /* Alatta távolságot biztosítunk */
+    
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-type {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.card-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .card-play {
+    opacity: 1;
+}
+
+.card-play svg {
+    fill: #fff;
+    width: 24px;
+    height: 24px;
+}
+
+.card-content {
+    padding: 10px 15px; /* Kisebb belső margó */
+}
+
+.card-title a {
+    color: #fff;
+    font-size: 16px; /* Kisebb cím betűméret */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card-title a:hover {
+    color: #ffcc00;
+}
+
+.card_category {
+    font-size: 12px; /* Kisebb szöveg */
+    color: #aaa;
+    display: block;
+    margin-top: 5px;
+}
+
+.card-rate {
+    display: flex;
+    align-items: center;
+    font-size: 12px; /* Kisebb betűméret */
+    color: #ffcc00;
+    margin-top: 5px;
+}
+
+.card-rate img.icon {
+    width: 18px; /* Kisebb ikon */
+    height: 18px;
+    margin-right: 5px;
+}
+
+.card-rate svg.star-icon {
+    width: 12px; /* Kisebb csillag ikon */
+    height: 12px;
+    fill: #ffd700;
+    margin-left: 5px;
+}
+
+.card-rate svg.star-icon:hover {
+    fill: #ffcc00;
+}
+
+.shameless {
+    object-fit: cover;
+}
+
+
+  
+  
+  
+
+  
+
+  
+  

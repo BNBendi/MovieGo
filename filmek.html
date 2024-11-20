@@ -3,11 +3,856 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="films.css">
+    <script src="app.js" defer></script>
     <title>Document</title>
 </head>
 <body>
+    <nav>
+        <li><a href="./main.html" id="main_page"><img src="img/movieGo_small.png" alt="MovieGO" id="MovieGO"></a></li>
+        <li><a href="https://www.paypal.com/hu/home" id="blue">Paypal</a></li>
+        <li><a href="https://www.patreon.com/" id="red">Patreon</a></li>
+        <li><a href="https://discord.com/" id="blue_and_white">Discord</a></li>
+        <li><a href="#" id="copyright">Szerzői jogok</a></li>
+        <li><a href="https://www.facebook.com" id="white">Facebook</a></li>
+        <li><a href="https://www.instagram.com" id="purple_and_pink">Instagram</a></li>
+        <li><a href="./anime.html" id="pink">Anime</a></li>
+        <div class="buttons">
+            <a href="./bejelentkezes.html">
+                <button type="button">Bejelentkezés</button>
+            </a>
+            <a href="./regisztracio.html">
+                <button type="button">Regisztráció</button>
+            </a>
+        </div>
+    </nav>
+    <div class="csik"></div>
     <header>
-        
+        <h1>Filmek</h1>
     </header>
+    <div class="csik"></div>
+    <div class="dropdowns">
+        <div class="dropdown">
+          <label>Műfaj:</label>
+          <div class="custom-dropdown" id="genre-dropdown">
+            <div class="dropdown-selected">Összes</div>
+            <ul class="dropdown-options">
+              <div class="csik li-csik"></div>
+              <li data-value="osszes">Összes</li>
+              <li data-value="action">Akció</li>
+              <li data-value="drama">Dráma</li>
+              <li data-value="comedy">Vígjáték</li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="dropdown">
+          <label>Típus:</label>
+          <div class="custom-dropdown" id="type-dropdown">
+            <div class="dropdown-selected">Összes</div>
+            <ul class="dropdown-options">
+              <div class="csik li-csik"></div>
+              <li data-value="osszes">Összes</li>
+              <li data-value="movie">Film</li>
+              <li data-value="series">Sorozat</li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="dropdown">
+          <label>Rendezés:</label>
+          <div class="custom-dropdown" id="order-dropdown">
+            <div class="dropdown-selected">Újak elől</div>
+            <ul class="dropdown-options">
+              <div class="csik li-csik"></div>
+              <li data-value="newest">Újak elől</li>
+              <li data-value="oldest">Régiek elől</li>
+              <li data-value="alphabetical">ABC sorrend</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+    <div class="csik"></div>
+
+    <main>
+        <div class="popular-container">
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card shameless">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/shameless.jpg" alt="Shameless">
+                <span class="card-play">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                        </path>
+                    </svg>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Szégyentelenek</a>
+                        <span class="card_category">
+                            Dráma,Vígjáték
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">8.6
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            1267
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/Tulsa-kiralya--142365.jpg" alt="Tulsa King">
+                <span class="card-play">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                        </path>
+                    </svg>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Tulsa Királya</a>
+                        <span class="card_category">
+                            Bűnügyi, Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt="."> 8.0
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            1836
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/Vampirnaplok--27119.jpg" alt="The Vampire Diaries">
+                <span class="card-play">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                        </path>
+                    </svg>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Vámpírnaplók</a>
+                        <span class="card_category">
+                            Dráma,Fantasy,Horror
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.7
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            986
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card big-card">
+                <a href="#"></a>
+                <span class="card-type">Sorozat</span>
+                <img src="./img/outer_banks.jpg" alt="Outer Banks">
+                <span class="card-play">
+                    <a href="./outer_banks.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
+                            </path>
+                        </svg></a>
+                </span>
+                <div class="card-content">
+                    <div class="card-title">
+                        <a href="#">Outer Banks</a>
+                        <span class="card_category">
+                            Akció,Krími,Dráma
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon.ico" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff"
+                                style="margin-left: 10px; margin-right: 5px; --darkreader-inline-fill: #c2c0be;"
+                                height="18" viewBox="0 0 24 24" data-darkreader-inline-fill="">
+                                <path
+                                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+                                </path>
+                            </svg>
+                            3315
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-buttons">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+        </div>
+    </main>
+
 </body>
 </html>
