@@ -1,4 +1,3 @@
-/* Alap beállítások */
 * {
     margin: 0;
     padding: 0;
@@ -6,23 +5,23 @@
 }
 
 body {
-    background: linear-gradient(to bottom, rgb(100, 27, 27), rgb(50, 50, 50)); 
-    font-family: 'Roboto', sans-serif; /* Modern betűtípus */
+    background: linear-gradient(to bottom, #641b1b, #323232);
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Navbar */
 nav {
     position: relative;
     flex-direction: row;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(31, 30, 30);
+    background-color: #1f1e1e;
+    animation: fadeIn 1s ease-out;
 }
+
 .line {
     position: relative;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0;
     font-size: 20px;
 }
 
@@ -47,6 +46,7 @@ nav li {
     padding: 10px;
     gap: 1rem;
     list-style-type: none;
+    animation: fadeIn 1s ease-out;
 }
 
 nav li a {
@@ -54,8 +54,9 @@ nav li a {
     color: white;
 }
 
-#main_page {
+#main_page, #blue, #red, #blue_and_white, #copyright, #purple_and_pink, #pink {
     transition: color 0.5s ease, transform 0.3s ease;
+    animation: fadeIn 1s ease-out;
 }
 
 #main_page:hover {
@@ -63,17 +64,9 @@ nav li a {
     transform: scale(0.90);
 }
 
-#blue {
-    transition: color 0.5s ease, transform 0.3s ease;
-}
-
 #blue:hover {
     color: blue;
     transform: scale(0.90);
-}
-
-#red {
-    transition: color 0.5s ease, transform 0.3s ease;
 }
 
 #red:hover {
@@ -81,17 +74,9 @@ nav li a {
     transform: scale(0.90);
 }
 
-#blue_and_white {
-    transition: color 0.5s ease, transform 0.3s ease;
-}
-
 #blue_and_white:hover {
     color: rgb(26, 26, 179);
     transform: scale(0.90);
-}
-
-#copyright {
-    transition: color 0.5s ease, transform 0.3s ease;
 }
 
 #copyright:hover {
@@ -99,17 +84,9 @@ nav li a {
     transform: scale(0.90);
 }
 
-#purple_and_pink {
-    transition: color 0.5s ease, transform 0.3s ease;
-}
-
 #purple_and_pink:hover {
     color: rgb(161, 38, 161);
     transform: scale(0.90);
-}
-
-#pink {
-    transition: color 0.5s ease, transform 0.3s ease;
 }
 
 #pink:hover {
@@ -118,54 +95,57 @@ nav li a {
 }
 
 .buttons button {
-    padding: 15px 30px;
+    padding: 8px 16px; /* Kisebb padding a gombokhoz */
     border-radius: 25px;
-    background: linear-gradient(145deg, #6a11cb, #2575fc); /* Színátmenet */
+    background: linear-gradient(145deg, #6a11cb, #2575fc);
     border: none;
-    font-size: 1.1rem;
+    font-size: 0.9rem; /* A betűméret csökkentése */
     font-weight: bold;
     color: white;
     transition: transform 0.3s ease, background 0.3s ease;
+    animation: fadeIn 1s ease-out;
+    margin-right: 8px;
+    flex-shrink: 0; /* Ne zsugorodjon össze */
 }
 
 .buttons button:hover {
     transform: scale(1.1);
-    background: linear-gradient(145deg, #2575fc, #6a11cb); /* Színátmenet fordítása */
+    background: linear-gradient(145deg, #2575fc, #6a11cb);
 }
 
-/* Kártya tárolója */
 .container {
     display: flex;
     justify-content: center;
     padding: 20px;
+    animation: fadeIn 1s ease-out;
 }
 
-/* Maga a kártya */
 .card {
     display: flex;
     max-width: 1200px;
     width: 100%;
-    border: 1px solid rgb(100, 27, 27);
+    border: 1px solid #641b1b;
     border-radius: 8px;
     overflow: hidden;
-    background-color: rgb(61, 44, 44);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Erősebb árnyék */
+    background-color: #3d2c2c;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     gap: 1rem;
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    animation: fadeIn 1s ease-out;
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Hover animáció */
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .card-cover {
-    display: flex;
     flex: 0 0 40%;
     max-width: 500px;
     width: 100%;
     flex-direction: column;
     margin-bottom: 100px;
+    animation: fadeIn 1s ease-out;
 }
 
 .card-cover img {
@@ -177,8 +157,8 @@ nav li a {
 }
 
 .card-cover img:hover {
-    transform: scale(1.1);
-    filter: brightness(0.8);
+    transform: scale(1.15);
+    filter: brightness(0.7);
 }
 
 .card-content {
@@ -243,61 +223,63 @@ nav li a {
     color: rgb(173, 170, 170);
 }
 
-/* Video container */
 .video-container {
     position: relative;
     width: 100%;
     max-width: 900px;
     margin: 30px auto;
-    border: 1px solid rgb(100, 27, 27);  
-    border-radius: 8px;  
-    background-color: rgb(71, 71, 71); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #641b1b;
+    border-radius: 8px;
+    background-color: rgb(71, 71, 71);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
 }
 
 .video-container iframe {
     width: 100%;
-    height: 450px; 
-    border-radius: 8px;  
-    object-fit: cover; 
+    height: 450px;
+    border-radius: 8px;
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .video-container:hover iframe {
-    transform: scale(1.05); /* Kisebb animáció a videónál */
+    transform: scale(1.1);
 }
-.episode-container{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-.buttons_down{
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
 
+.episode-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    justify-content: center;
+    gap: 10px;
+    scroll-snap-type: x mandatory;
+}
+
+.buttons_down {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    margin-top: 10px;
+    gap: 10px;
 }
 
 .buttons_down button {
-    padding: 15px 30px;
+    padding: 8px 16px; /* Kisebb padding a gombokhoz */
     border-radius: 25px;
-    background: linear-gradient(145deg, #4c3663, #223f70); /* Színátmenet */
+    background: linear-gradient(145deg, #4c3663, #223f70);
     border: none;
-    font-size: 1.1rem;
+    font-size: 0.9rem; /* A betűméret csökkentése */
     font-weight: bold;
     color: white;
     transition: transform 0.3s ease, background 0.3s ease;
-    width: 200px;
-    
+    width: 150px;
+    flex-shrink: 0;
 }
-/*Az alsó gombok*/
+
 .buttons_down button:hover {
     transform: scale(1.1);
-    background: linear-gradient(145deg, #aa4e10, #6a11cb); /* Színátmenet fordítása */
-}
-.dropdown {
-    position: relative;
-    display: inline-block;
+    background: linear-gradient(145deg, #aa4e10, #6a11cb);
 }
 
 .dropdown-btn {
@@ -313,12 +295,20 @@ nav li a {
     background-color: #45a049;
 }
 
+.dropdown {
+    position: relative;
+    flex: 0 0 auto;
+    width: 150px;
+    margin-bottom: 20px;
+    scroll-snap-align: start;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #f9f9f9;
+    background-color: black;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     white-space: nowrap;
@@ -327,71 +317,100 @@ nav li a {
 
 .dropdown-content p {
     padding: 8px 16px;
-    text-decoration: none;
     display: inline-block;
     transition: transform 0.3s ease, background 0.3s ease;
-    color: black;
+    color: white;
     gap: 1rem;
     margin: 0;
 }
 
 .dropdown-content p:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
     background: linear-gradient(145deg, #aa4e10, #6a11cb);
 }
 
 .dropdown.active .dropdown-content {
     display: block;
 }
-.shameless{
-    margin: 0;
-    text-decoration: none;
-}
-.shameless a {
-    display: block;
-    padding: 15px 30px;
-    text-decoration: none !important; 
-    list-style-type: none !important;
-    color: #000000;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+
+.eleven .dropdown-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.shameless a:hover {
-    background-color: #e1e1e1;
+.eleven .dropdown-btn:hover {
+    background-color: #45a049;
     transform: scale(1.05);
 }
 
-.shameless2 {
+.eleven .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.eleven .dropdown-content p {
+    padding: 8px 16px;
+    display: inline-block;
+    transition: transform 0.3s ease, background 0.3s ease;
+    color: black;
+    gap: 1rem;
     margin: 0;
     text-decoration: none;
 }
 
-.shameless2 a {
+.eleven .dropdown-content p:hover {
+    transform: scale(1.15);
+    background: linear-gradient(145deg, #aa4e10, #6a11cb);
+}
+
+.eleven.active .dropdown-content {
     display: block;
-    padding: 15px 30px;
-    text-decoration: none !important; 
-    list-style-type: none !important;
-    color: #000000;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.shameless2 a:hover {
-    background-color: #e1e1e1;
-    transform: scale(1.05);
-}
-
-/* Animációk */
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
-.card {
-    animation: fadeIn 1s ease-out;
+@media (max-width: 1024px) {
+    .buttons_down button {
+        width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .buttons_down button {
+        width: 100px;
+    }
+}
+
+.episode-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.episode-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.episode-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
 }

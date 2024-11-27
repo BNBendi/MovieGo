@@ -16,3 +16,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var dropdownBtn = document.querySelector('.first-dropdown-btn');
+    var dropdownContent = document.querySelector('.first-dropdown-content');
+
+    dropdownBtn.addEventListener('click', function(event) {
+        dropdownContent.classList.toggle('active');
+        event.stopPropagation();
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!dropdownContent.contains(event.target) && !dropdownBtn.contains(event.target)) {
+            dropdownContent.classList.remove('active');
+        }
+    });
+});
