@@ -94,7 +94,7 @@ body{
 }
 
 .col-md-4:hover .card-play {
-    opacity: 4;
+    opacity: 1;
 }
 
 .card-play svg {
@@ -194,11 +194,38 @@ max-height: 100vh;
 }
 
 /* A lejátszó ikon pozicionálása */
-.imiges .card1 .card-play {
+.card-img-overlay {
+    display: flex; /* Flexbox elrendezés */
+    flex-wrap: wrap; /* Törés, ha a kártyák nem férnek el egy sorban */
+    gap: 20px; /* Távolság a kártyák között */
+    justify-content: center; /* Kártyák középre igazítása */
+    padding: 20px;
+}
+
+.card-img-overlay .imiges {
+    flex: 1 1 calc(20% - 100px); /* Rugalmas szélesség, 5 kártya egy sorban */
+    margin-top: 100px;
+    max-width: calc(20% - 100px); /* 20%-os szélesség */
+    box-sizing: border-box; /* Paddings és border számítása */
+    
+}
+
+.card-img-overlay .imiges .card {
+    position: relative;
+    width: 250px; /* Kitölti a rendelkezésre álló területet */
+    overflow: hidden;
+}
+
+.card-img-overlay .card img {
+    width: 100%; /* Kép igazítása a kártyán belül */
+    border-radius: 5px;
+}
+
+.card-img-overlay .card-play {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* A középhez igazítja */
+    transform: translate(-50%, -50%);
     width: 50px;
     height: 50px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -206,41 +233,18 @@ max-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Kezdetben nem látszik */
-    transition: opacity 0.3s ease; /* Zökkenőmentes áttűnés */
-    z-index: 2; /* A többi elem fölött jelenjen meg */
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-/* A hover effekt, amikor a kép fölé viszed az egeret */
-.imiges:hover .card1 .card-play {
-    opacity: 1; /* Megjeleníti a videó ikont, amikor a konténer fölé húzod az egeret */
+.card-img-overlay .card:hover .card-play {
+    opacity: 1;
 }
 
-/* Az SVG ikont fehérre színezzük és a megfelelő méretet állítjuk be */
-.imiges .card-play .card1 svg {
+.card-img-overlay .card-play svg {
     fill: #fff;
     width: 24px;
     height: 24px;
-}
-
-/* A .imiges konténer */
-.imiges {
-    display: flex; 
-    gap: 50px; 
-    justify-content: center; 
-    align-items: center; 
-    margin-top: 10px; 
-    padding: 0; 
-}
-
-/* Képek stílusa */
-.imiges img {
-    display: block; 
-    margin: 0; 
-    padding: 0; 
-    width: 300px; 
-    max-width: 100%; 
-    border-radius: 5px;
 }
 
 /* Ha a képek közötti távolságot nem lehet csökkenteni, próbálj meg eltávolítani minden egyéb margót */
