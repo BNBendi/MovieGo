@@ -54,20 +54,34 @@ document.addEventListener('DOMContentLoaded', () => {
     function sortMovies(order) {
       const cards = Array.from(document.querySelectorAll('.card'));
       const container = document.querySelector('.popular-container');
-  
+    
       let sortedCards;
+    
+      // Rendezési logika
       if (order === 'Újak elől') {
-        sortedCards = cards.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+        sortedCards = cards.sort((a, b) => {
+          const dateA = new Date(a.getAttribute('data-date'));
+          const dateB = new Date(b.getAttribute('data-date'));
+          return dateB - dateA; // Újabb előre
+        });
       } else if (order === 'Régiek elől') {
-        sortedCards = cards.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
+        sortedCards = cards.sort((a, b) => {
+          const dateA = new Date(a.getAttribute('data-date'));
+          const dateB = new Date(b.getAttribute('data-date'));
+          return dateA - dateB; // Régebbi előre
+        });
       } else if (order === 'ABC sorrend') {
-        sortedCards = cards.sort((a, b) =>
-          a.querySelector('.card-title a').textContent.localeCompare(b.querySelector('.card-title a'))
-        );
+        sortedCards = cards.sort((a, b) => {
+          const titleA = a.querySelector('.card-title a').textContent.trim().toLowerCase();
+          const titleB = b.querySelector('.card-title a').textContent.trim().toLowerCase();
+          return titleA.localeCompare(titleB); // ABC szerint
+        });
       }
-  
+    
+      // Kártyák újrarendezése a konténerben
       sortedCards.forEach(card => container.appendChild(card));
     }
+    
   
     // Alapértelmezett állapot: összes műfaj
     filterMovies();
