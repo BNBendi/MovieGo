@@ -236,9 +236,9 @@ nav li a {
 }
 
 .card img {
-    width: 100%;
     height: auto;
     display: block;
+    width: 100%;
 }
 
 .card-type {
@@ -396,7 +396,6 @@ nav li a {
     display: none;
 }
 
-/* Dropdown menü megjelenítése, amikor a 'show' osztály hozzá van adva */
 .dropdown-options.show {
     display: block;
 }
