@@ -57,24 +57,24 @@ document.addEventListener('DOMContentLoaded', () => {
     
       let sortedCards;
     
-      // Rendezési logika
+      // Rendezés
       if (order === 'Újak elől') {
         sortedCards = cards.sort((a, b) => {
           const dateA = new Date(a.getAttribute('data-date'));
           const dateB = new Date(b.getAttribute('data-date'));
-          return dateB - dateA; // Újabb előre
+          return dateB - dateA; 
         });
       } else if (order === 'Régiek elől') {
         sortedCards = cards.sort((a, b) => {
           const dateA = new Date(a.getAttribute('data-date'));
           const dateB = new Date(b.getAttribute('data-date'));
-          return dateA - dateB; // Régebbi előre
+          return dateA - dateB; 
         });
       } else if (order === 'ABC sorrend') {
         sortedCards = cards.sort((a, b) => {
           const titleA = a.querySelector('.card-title a').textContent.trim().toLowerCase();
           const titleB = b.querySelector('.card-title a').textContent.trim().toLowerCase();
-          return titleA.localeCompare(titleB); // ABC szerint
+          return titleA.localeCompare(titleB); 
         });
       }
     
@@ -82,8 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
       sortedCards.forEach(card => container.appendChild(card));
     }
     
-  
-    // Alapértelmezett állapot: összes műfaj
     filterMovies();
   });
   
