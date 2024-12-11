@@ -51,7 +51,46 @@ nav li a:hover {
     color: #ff007a;
     transform: scale(1.05);
 }
+#main_page, #blue, #red, #blue_and_white, #copyright, #purple_and_pink, #pink,#quiz,#white {
+    transition: color 0.5s ease, transform 0.3s ease;
+    animation: fadeIn 1s ease-out;
+    color: white;
+}
 
+#main_page:hover {
+    color: black;
+    transform: scale(0.90);
+}
+
+#blue:hover {
+    color: blue;
+    transform: scale(0.90);
+}
+
+#red:hover {
+    color: red;
+    transform: scale(0.90);
+}
+
+#blue_and_white:hover {
+    color: rgb(26, 26, 179);
+    transform: scale(0.90);
+}
+
+#copyright:hover {
+    color: yellow;
+    transform: scale(0.90);
+}
+
+#purple_and_pink:hover {
+    color: rgb(161, 38, 161);
+    transform: scale(0.90);
+}
+
+#pink:hover {
+    color: pink;
+    transform: scale(0.90);
+}
 /**********/
 /*Main*/
 main {
@@ -209,20 +248,58 @@ main h1::before {
 }
 /*Gombok*/
 .buttons button {
-    padding: 15px 30px;
-    border-radius: 25px;
-    background: linear-gradient(145deg, #6a11cb, #2575fc); 
+    padding: 12px 24px;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #6a11cb, #2575fc);
     border: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: bold;
     color: white;
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    margin-right: 8px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.buttons button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease, top 0.3s ease;
+    transform: translate(-50%, -50%);
 }
 
 .buttons button:hover {
     transform: scale(1.1);
-    background: linear-gradient(145deg, #2575fc, #6a11cb); 
+    background: linear-gradient(145deg, #ff007a, #ff5f00); /* Élénkebb színek */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);  /* Mélyebb és finomabb árnyék */
+    filter: brightness(1.2);  /* További fényesítés */
 }
+
+.buttons button:active {
+    transform: scale(0.98);  /* Nyomás hatásra összenyomódás */
+    background: linear-gradient(145deg, #ff5f00, #ff007a); /* Invertált színátmenet nyomáskor */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);  /* Erősebb árnyék nyomáskor */
+}
+
+.buttons button:hover:before {
+    width: 100%;
+    top: 100%;
+}
+
+.buttons button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 0, 122, 0.4); /* Fókuszált állapot kiemelése */
+}
+
 
 
 /**********/

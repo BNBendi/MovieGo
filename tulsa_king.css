@@ -15,10 +15,37 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1f1e1e;
-    animation: fadeIn 1s ease-out;
+    background-color: rgb(31, 30, 30);
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Állandó árnyék a navbar alatt */
 }
 
+#MovieGO {
+    max-width: 100px;
+    float: left;
+    margin-right: 60px;
+    border-radius: 700px;
+}
+
+nav li {
+    padding: 10px;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+
+nav li a:hover {
+    color: #ff007a;
+    transform: scale(1.05);
+}
 .line {
     position: relative;
     padding: 10px 0;
@@ -35,28 +62,10 @@ nav {
     background: linear-gradient(to right, #ff007a, #ff8a00);
 }
 
-#MovieGO {
-    max-width: 100px;
-    float: left;
-    margin-right: 60px;
-    border-radius: 700px;
-}
-
-nav li {
-    padding: 10px;
-    gap: 1rem;
-    list-style-type: none;
-    animation: fadeIn 1s ease-out;
-}
-
-nav li a {
-    text-decoration: none;
-    color: white;
-}
-
-#main_page, #blue, #red, #blue_and_white, #copyright, #purple_and_pink, #pink {
+#main_page, #blue, #red, #blue_and_white, #copyright, #purple_and_pink, #pink,#quiz,#white {
     transition: color 0.5s ease, transform 0.3s ease;
     animation: fadeIn 1s ease-out;
+    color: white;
 }
 
 #main_page:hover {
@@ -95,23 +104,58 @@ nav li a {
 }
 
 .buttons button {
-    padding: 8px 16px; /* Kisebb padding a gombokhoz */
-    border-radius: 25px;
+    padding: 12px 24px;
+    border-radius: 30px;
     background: linear-gradient(145deg, #6a11cb, #2575fc);
     border: none;
-    font-size: 0.9rem; /* A betűméret csökkentése */
+    font-size: 1rem;
     font-weight: bold;
     color: white;
-    transition: transform 0.3s ease, background 0.3s ease;
-    animation: fadeIn 1s ease-out;
+    transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.3s ease, filter 0.3s ease;
     margin-right: 8px;
-    flex-shrink: 0; /* Ne zsugorodjon össze */
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.buttons button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease, top 0.3s ease;
+    transform: translate(-50%, -50%);
 }
 
 .buttons button:hover {
     transform: scale(1.1);
-    background: linear-gradient(145deg, #2575fc, #6a11cb);
+    background: linear-gradient(145deg, #ff007a, #ff5f00); /* Élénkebb színek */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);  /* Mélyebb és finomabb árnyék */
+    filter: brightness(1.2);  /* További fényesítés */
 }
+
+.buttons button:active {
+    transform: scale(0.98);  /* Nyomás hatásra összenyomódás */
+    background: linear-gradient(145deg, #ff5f00, #ff007a); /* Invertált színátmenet nyomáskor */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);  /* Erősebb árnyék nyomáskor */
+}
+
+.buttons button:hover:before {
+    width: 100%;
+    top: 100%;
+}
+
+.buttons button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 0, 122, 0.4); /* Fókuszált állapot kiemelése */
+}
+
 
 .container {
     display: flex;
@@ -127,11 +171,12 @@ nav li a {
     border: 1px solid #641b1b;
     border-radius: 8px;
     overflow: hidden;
-    background-color: #3d2c2c;
+    background-color: black !important;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     gap: 1rem;
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
     animation: fadeIn 1s ease-out;
+    height: auto;
 }
 
 .card:hover {
@@ -139,34 +184,33 @@ nav li a {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
+.card-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
 .card-cover {
     flex: 0 0 40%;
     max-width: 500px;
     width: 100%;
     flex-direction: column;
-    margin-bottom: 100px;
     animation: fadeIn 1s ease-out;
+    flex: 1;
+    overflow: hidden;
+    margin-bottom: 0;
 }
 
 .card-cover img {
-    width: 100% !important;
-    height: 100%;
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.card-cover img:hover {
-    transform: scale(1.15);
-    filter: brightness(0.7);
 }
 
 .card-content {
-    flex: 1 1 60%;
+    flex: 2;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background-color: black;
+    min-height: inherit;
 }
 
 .card-rate {
@@ -331,7 +375,8 @@ nav li a {
 
 .dropdown.active .dropdown-content {
     display: block;
-} 
+}
+
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
