@@ -1,0 +1,91 @@
+/* Általános stílusok */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+    margin: 0;
+}
+
+
+/* A kvíz konténer */
+.quiz-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+}
+
+/* Kérdés */
+.question {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Válasz lehetőségek */
+.answers-container {
+    margin-bottom: 30px;
+}
+
+.answer-option {
+    display: block;
+    margin: 10px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Küldés gomb */
+#submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+#submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Eredmény szöveg */
+#result {
+    font-size: 1.2em;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Eredmény színek */
+#result.correct {
+    color: green;
+}
+
+#result.incorrect {
+    color: red;
+}
+#next-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+#next-button:hover {
+    background-color: #0056b3;
+}
