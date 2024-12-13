@@ -17,7 +17,7 @@ nav {
     justify-content: center;
     background-color: rgb(31, 30, 30);
     padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Állandó árnyék a navbar alatt */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #MovieGO {
@@ -41,11 +41,11 @@ nav li a {
     transition: color 0.3s ease;
 }
 
-
 nav li a:hover {
     color: #ff007a;
     transform: scale(1.05);
 }
+
 .line {
     position: relative;
     padding: 10px 0;
@@ -62,7 +62,7 @@ nav li a:hover {
     background: linear-gradient(to right, #ff007a, #ff8a00);
 }
 
-#main_page, #blue, #red, #blue_and_white, #copyright, #purple_and_pink, #pink,#quiz,#white {
+#main_page, #blue, #red, #blue_and_white, #copyright, #purple_and_pink, #pink, #quiz, #white {
     transition: color 0.5s ease, transform 0.3s ease;
     animation: fadeIn 1s ease-out;
     color: white;
@@ -135,15 +135,15 @@ nav li a:hover {
 
 .buttons button:hover {
     transform: scale(1.1);
-    background: linear-gradient(145deg, #ff007a, #ff5f00); /* Élénkebb színek */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);  /* Mélyebb és finomabb árnyék */
-    filter: brightness(1.2);  /* További fényesítés */
+    background: linear-gradient(145deg, #ff007a, #ff5f00);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.2);
 }
 
 .buttons button:active {
-    transform: scale(0.98);  /* Nyomás hatásra összenyomódás */
-    background: linear-gradient(145deg, #ff5f00, #ff007a); /* Invertált színátmenet nyomáskor */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);  /* Erősebb árnyék nyomáskor */
+    transform: scale(0.98);
+    background: linear-gradient(145deg, #ff5f00, #ff007a);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .buttons button:hover:before {
@@ -153,15 +153,15 @@ nav li a:hover {
 
 .buttons button:focus {
     outline: none;
-    box-shadow: 0 0 0 4px rgba(255, 0, 122, 0.4); /* Fókuszált állapot kiemelése */
+    box-shadow: 0 0 0 4px rgba(255, 0, 122, 0.4);
 }
-
 
 .container {
     display: flex;
     justify-content: center;
     padding: 20px;
     animation: fadeIn 1s ease-out;
+    gap: 2rem; /* Ensures space between image and card */
 }
 
 .card {
@@ -190,12 +190,11 @@ nav li a:hover {
 }
 
 .card-cover {
-    flex: 0 0 40%;
+    flex: 0 0 40%; /* Makes the image take up 40% of the space */
     max-width: 500px;
     width: 100%;
     flex-direction: column;
     animation: fadeIn 1s ease-out;
-    flex: 1;
     overflow: hidden;
     margin-bottom: 0;
 }
@@ -203,7 +202,6 @@ nav li a:hover {
 .card-cover img {
     width: 100%;
     height: auto;
-    object-fit: cover;
 }
 
 .card-content {
@@ -315,11 +313,11 @@ nav li a:hover {
 }
 
 .buttons_down button {
-    padding: 8px 16px; /* Kisebb padding a gombokhoz */
+    padding: 8px 16px;
     border-radius: 25px;
     background: linear-gradient(145deg, #4c3663, #223f70);
     border: none;
-    font-size: 0.9rem; /* A betűméret csökkentése */
+    font-size: 0.9rem;
     font-weight: bold;
     color: white;
     transition: transform 0.3s ease, background 0.3s ease;
@@ -383,84 +381,7 @@ nav li a:hover {
     display: block;
 }
 
-.eleven .dropdown-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 6px 12px;
-    font-size: 0.85rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 25px;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.eleven .dropdown-btn:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-.eleven .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: black;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    white-space: nowrap;
-}
-
-.eleven .dropdown-content p {
-    padding: 8px 16px;
-    display: inline-block;
-    transition: transform 0.3s ease, background 0.3s ease;
-    color: black;
-    gap: 1rem;
-    margin: 0;
-    text-decoration: none;
-}
-
-.eleven .dropdown-content p:hover {
-    transform: scale(1.15);
-    background: linear-gradient(145deg, #aa4e10, #6a11cb);
-}
-
-.eleven.active .dropdown-content {
-    display: block;
-}
-
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 1024px) {
-    .buttons_down button {
-        width: 120px;
-    }
-}
-
-@media (max-width: 768px) {
-    .buttons_down button {
-        width: 100px;
-    }
-}
-
-.episode-container::-webkit-scrollbar {
-    height: 8px;
-}
-
-.episode-container::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 10px;
-}
-
-.episode-container::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-}
-
-a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-    text-decoration: none;
 }

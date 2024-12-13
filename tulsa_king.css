@@ -267,6 +267,13 @@ nav li a:hover {
     color: rgb(173, 170, 170);
 }
 
+.cast{
+    display: flex;
+    flex-direction: column;
+    align-items: center!important;
+    justify-content: center!important;
+}
+
 .video-container {
     position: relative;
     width: 100%;
