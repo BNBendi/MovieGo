@@ -1,6 +1,13 @@
 # MovieGo
 
-Ezt az ötletet Bende találta ki, és mivel senkinek nem volt más ötelte ,ezért elfogadtuk.
+A projekt készítői: Nagy Botond, Bodonyi-Nagy Bendegúz,Takács Ákos
+Téma kitalálói:Bodonyi-Nagy Bendegúz(főképp ő),Nagy Botond
+Alapok:Nagy Botond
+Közreműködő:Takács Ákos(Nem tudtam mit ideírni XD)
+Project elindításának száma: 2(szép volt Takács)
+Inspiráció:https://moviedrive.hu/
+Idegrohamok száma: sok
+
 
 Az én munkám:
 
