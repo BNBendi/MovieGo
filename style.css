@@ -1,171 +1,79 @@
-/*body és univerzális szelektorok*/
+/* Alapértelmezett beállítások */
 * {
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
-
-body {
-    font-family: 'Arial', Helvetica, sans-serif;
-    background-color: hsl(0, 0%, 0%);
-    color: white;
+body{
+    background-color: rgb(0, 0, 0);
 }
-
-/*************/
-
-/**********/
-/*Navbar*/
-nav {
-    position: relative;
-    flex-direction: row;
+.weekly-container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 20px; 
     justify-content: center;
-    background-color: rgb(31, 30, 30);
-    padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Állandó árnyék a navbar alatt */
+    align-items: center;
 }
-
-#MovieGO {
-    max-width: 100px;
-    float: left;
-    margin-right: 60px;
-    border-radius: 700px;
-}
-
-nav li {
-    padding: 10px;
-    gap: 1rem;
-    list-style-type: none;
-}
-
-nav li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav li a:hover {
-    color: #ff007a;
-    transform: scale(1.05);
-}
-#main_page, #blue, #red, #blue_and_white, #copyright, #purple_and_pink, #pink,#quiz,#white {
-    transition: color 0.5s ease, transform 0.3s ease;
-    animation: fadeIn 1s ease-out;
-    color: white;
-}
-
-#main_page:hover {
-    color: black;
-    transform: scale(0.90);
-}
-
-#blue:hover {
-    color: blue;
-    transform: scale(0.90);
-}
-
-#red:hover {
-    color: red;
-    transform: scale(0.90);
-}
-
-#blue_and_white:hover {
-    color: rgb(26, 26, 179);
-    transform: scale(0.90);
-}
-
-#copyright:hover {
-    color: yellow;
-    transform: scale(0.90);
-}
-
-#purple_and_pink:hover {
-    color: rgb(161, 38, 161);
-    transform: scale(0.90);
-}
-
-#pink:hover {
-    color: pink;
-    transform: scale(0.90);
-}
-/**********/
-/*Main*/
-main {
-    background-color: darkgrey;
-}
-
-main h1 {
-    background-color: #1c1c1c;
-    color: #fff;
+/* section header formázása BNB */
+.section-header {
+    background-color: #1c1c1c; 
+    color: #fff; 
     padding: 20px;
     text-align: left;
     position: relative;
 }
 
-main h1::before {
+.section-header::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     height: 3px;
     width: 100%;
-    background: linear-gradient(to right, #ff007a, #ff8a00);
+    background: linear-gradient(to right, #ff007a, #ff8a00); 
 }
 
-/**********/
-/*Popular_container*/
-.popular-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
+.section-header h2 {
+    font-size: 24px;
+    margin: 0;
 }
+/* vége */
 
+
+/* Kártya stílusa */
 .card {
-    position: relative;
-    background-color: #333;
+    display: flex;
+    background-color: #000000;
+    border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1 1 calc(25% - 20px);
-    max-width: calc(25% - 20px);
+    flex-direction: row;
+    max-height: 250px;
+    margin-bottom: 20px;
 }
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Hover árnyék növelése */
-}
-
-.big-card {
-    width: 100%;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease; /* Kép animáció */
-}
-
-/* .card img:hover {
-    transform: scale(1.05); /* Kép nagyítása hoverre 
-} */
 
 .card-type {
     position: absolute;
     top: 10px;
     left: 10px;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 5px 10px;
+    color: #fff;
+    padding: 5px 8px;
     font-size: 12px;
-    font-weight: bold;
-    border-radius: 4px;
+    border-radius: 3px;
+    z-index: 2;
+}
+
+/* Kép tartalmazó oszlop */
+.col-md-4 {
+    flex: 0 0 33.33%; 
+    position: relative;
+}
+
+.col-md-4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card-play {
@@ -173,8 +81,153 @@ main h1::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.col-md-4:hover .card-play {
+    opacity: 1;
+}
+
+.card-play svg {
+    fill: #fff;
+    width: 24px;
+    height: 24px;
+    
+}
+
+/* Szöveg tartalmazó oszlop */
+.col-md-8 {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+/* Kategóriák */
+.card_category {
+    font-size: 14px;
+    color: #aaa;
+    display: block;
+    margin-top: 5px;
+}
+
+.card_category a {
+    color: #aaa;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+.card_category a:hover {
+    color: #555;
+}
+
+/* Értékelés */
+.card-rate {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #ffcc00;
+    margin-top: 10px;
+}
+
+.card-rate .icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.card-rate .star-icon {
+    width: 14px;
+    height: 14px;
+    fill: #ffd700;
+    margin-left: 10px;
+}
+
+/* Leírás */
+.card-text {
+    font-size: 14px;
+    color: #fff7f7;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.new-upload-container .card-img{
+max-height: 100vh;
+ 
+}
+/* Ez a új feltötések kártyáé*/
+.card{
+    max-height: 600px;
+}
+/* Vége */
+.new-upload-container #main-pic{
+    opacity: .5;
+    max-height: 100%;
+}
+.new-upload-container h1{
+    font-size: 24px;
+    margin: 0;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    padding: 10px;
+    position: relative;
+    color: #fff;
+}
+ /* A konténer szülőelem (pl. a card) pozicionálása */
+.new-upload-container {
+    position: relative; /* Ezzel biztosítjuk, hogy a .card-play abszolút pozicionálása a szülő elemhez viszonyítva történjen */
+}
+
+/* A lejátszó ikon pozicionálása */
+.card-img-overlay {
+    display: flex; /* Flexbox elrendezés */
+    flex-wrap: wrap; /* Törés, ha a kártyák nem férnek el egy sorban */
+    gap: 20px; /* Távolság a kártyák között */
+    justify-content: center; /* Kártyák középre igazítása */
+    padding: 20px;
+}
+
+.card-img-overlay .imiges {
+    flex: 1 1 calc(20% - 100px); /* Rugalmas szélesség, 5 kártya egy sorban */
+    margin-top: 100px;
+    max-width: calc(20% - 100px); /* 20%-os szélesség */
+    box-sizing: border-box; /* Paddings és border számítása */
+    
+}
+
+.card-img-overlay .imiges .card {
+    position: relative;
+    width: 250px; /* Kitölti a rendelkezésre álló területet */
+    overflow: hidden;
+}
+
+.card-img-overlay .card img {
+    width: 100%; /* Kép igazítása a kártyán belül */
+    border-radius: 5px;
+}
+
+.card-img-overlay .card-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 50%;
     display: flex;
@@ -184,132 +237,151 @@ main h1::before {
     transition: opacity 0.3s ease;
 }
 
-.card:hover .card-play {
+.card-img-overlay .card:hover .card-play {
     opacity: 1;
 }
 
-.card-play svg {
+.card-img-overlay .card-play svg {
     fill: #fff;
     width: 24px;
     height: 24px;
 }
 
-.card-content {
-    padding: 15px;
+/* Ha a képek közötti távolságot nem lehet csökkenteni, próbálj meg eltávolítani minden egyéb margót */
+.imiges img + img {
+    margin-left: 0; 
+}
+.section .row{
+    background-color: #1c1c1c;
+}
+.col12{
+    background-color: #1c1c1c; 
+    color: #fff; 
+    padding: 20px;
+    text-align: left;
+    position: relative;
+}
+.col12::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, #ff007a, #ff8a00);    
+}
+.col-4 img{
+    width: 100px;
+    border-radius: 50px;
+    margin-left: 10px; ;
+    padding-bottom: 10px;
+}
+footer {
+    width: 100%; /* Teljes szélesség */
+    background-color: #1c1c1c; /* Háttérszín */
+    color: #fff;
+    padding: 20px 0;
+    position: relative; /* A pseudo-element helyzetének alapja */
 }
 
-.card-title a {
-    color: #fff;
+footer .row{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    position: relative; /* Szükséges a ::before pseudo-element pozicionálásához */
+    box-sizing: border-box; /* A padding ne növelje a szélességet */
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%; /* A széltől-szélig megjelenítés */
+    background: linear-gradient(to right, #ff007a, #ff8a00); /* Színátmenet */
+}
+
+footer .container {
+    max-width: 1200px; /* Tartalom maximális szélessége */
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer .column {
+    flex: 1;
+    min-width: 200px;
+}
+
+footer h5 {
+    margin-bottom: 10px;
     font-size: 18px;
     font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    color: #ffffff;
 }
 
-.card-title a:hover {
-    color: #ffcc00; 
-}
-
-.card_category {
-    font-size: 14px;
-    color: #aaa;
+footer a {
     display: block;
-    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    text-decoration: none;
 }
 
-.card-rate {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    color: #ffcc00;
-    margin-top: 10px;
+footer a:hover {
+    text-decoration: underline;
 }
 
-.card-rate img.icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
+footer p {
+    margin: 0;
+    color: #ffffff;
+}
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        max-height: none;
+    }
+
+    .col-md-4 {
+        flex: 0 0 100%;
+    }
+
+    .card-play {
+        width: 40px;
+        height: 40px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 12px;
+    }
+
+    footer .row {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.card-rate svg.star-icon {
-    width: 14px;
-    height: 14px;
-    fill: #ffd700;
-    margin-left: 5px;
-}
+@media (max-width: 480px) {
+    .section-header h2 {
+        font-size: 18px;
+    }
 
-.card-rate svg.star-icon:hover {
-    fill: #ffcc00;
-}
+    .card-title {
+        font-size: 1rem;
+    }
 
-/* Kép fit */
-.shameless {
-    object-fit: cover;
-}
-/*Gombok*/
-.buttons button {
-    padding: 12px 24px;
-    border-radius: 30px;
-    background: linear-gradient(145deg, #6a11cb, #2575fc);
-    border: none;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.3s ease, filter 0.3s ease;
-    margin-right: 8px;
-    flex-shrink: 0;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    outline: none;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
+    .card-text {
+        font-size: 12px;
+    }
 
-.buttons button:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 3px;
-    background-color: white;
-    transition: width 0.3s ease, top 0.3s ease;
-    transform: translate(-50%, -50%);
-}
-
-.buttons button:hover {
-    transform: scale(1.1);
-    background: linear-gradient(145deg, #ff007a, #ff5f00); /* Élénkebb színek */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);  /* Mélyebb és finomabb árnyék */
-    filter: brightness(1.2);  /* További fényesítés */
-}
-
-.buttons button:active {
-    transform: scale(0.98);  /* Nyomás hatásra összenyomódás */
-    background: linear-gradient(145deg, #ff5f00, #ff007a); /* Invertált színátmenet nyomáskor */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);  /* Erősebb árnyék nyomáskor */
-}
-
-.buttons button:hover:before {
-    width: 100%;
-    top: 100%;
-}
-
-.buttons button:focus {
-    outline: none;
-    box-shadow: 0 0 0 4px rgba(255, 0, 122, 0.4); /* Fókuszált állapot kiemelése */
-}
-
-
-
-/**********/
-/* Animációk */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Kártyák bejövő animáció */
-.card {
-    animation: fadeIn 1s ease-out;
-}
+    .card-rate {
+        font-size: 12px;
+    }
+}   
