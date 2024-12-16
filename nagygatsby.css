@@ -1,0 +1,292 @@
+/* Alap beállítások */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1f1e1e; /* Sötétebb háttérszín */
+    font-family: 'Roboto', sans-serif; /* Modern betűtípus */
+    color: #f0f0f0;
+}
+
+/* Navbar */
+nav {
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(31, 30, 30);
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Állandó árnyék a navbar alatt */
+}
+
+#MovieGO {
+    max-width: 100px;
+    float: left;
+    margin-right: 60px;
+    border-radius: 700px;
+}
+
+nav li {
+    padding: 10px;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav li a:hover {
+    color: #ff007a;
+    transform: scale(1.05);
+}
+
+/* Button styles */
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    padding: 12px 25px;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #6a11cb, #2575fc);
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.buttons button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(145deg, #2575fc, #6a11cb);
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Kártya elrendezés */
+.card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Hover effekt */
+}
+
+/* Kép */
+.card_cover {
+    flex: 1;
+    max-width: 40%;
+}
+
+.card_cover img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Tartalom */
+.card_content {
+    flex: 2;
+    padding: 20px;
+}
+
+.card_wrap {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card_rate {
+    margin: 0;
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+
+.card_list {
+    padding: 0;
+}
+
+.card_list li {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.card_meta {
+    margin-top: 5px;
+    padding: 0;
+}
+
+.card_meta li {
+    text-decoration: none;
+}
+
+.card_description {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+/* Videó beágyazás */
+.video-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #MovieGO {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+
+    nav li a {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .card_cover {
+        max-width: 100%;
+    }
+
+    .card_cover img {
+        border-radius: 10px;
+    }
+
+    .card_content {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card_rate,
+    .card_list li,
+    .card_description {
+        font-size: 14px;
+    }
+
+    .video-container {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Tablet Devices (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    #MovieGO {
+        margin-right: 30px;
+    }
+
+    nav li a {
+        font-size: 1.1rem;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+
+    .card_cover {
+        max-width: 45%;
+    }
+
+    .card_content {
+        width: 55%;
+        padding: 20px;
+    }
+
+    .card_rate,
+    .card_list li,
+    .card_description {
+        font-size: 16px;
+    }
+
+    .video-container {
+        max-width: 100%;
+    }
+}
+
+/* Desktop Devices (min-width: 1025px) */
+@media (min-width: 1025px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    #MovieGO {
+        margin-right: 60px;
+    }
+
+    nav li a {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        max-width: 1200px;
+    }
+
+    .card_cover {
+        max-width: 40%;
+    }
+
+    .card_content {
+        width: 60%;
+        padding: 20px;
+    }
+
+    .card_rate,
+    .card_list li,
+    .card_description {
+        font-size: 18px;
+    }
+
+    .video-container {
+        max-width: 100%;
+    }
+}
