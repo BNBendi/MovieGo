@@ -37,85 +37,86 @@ header h1{
 /*Navbar*/
 nav {
     position: relative;
-    flex-direction: row;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: rgb(31, 30, 30);
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Állandó árnyék a navbar alatt */
 }
-#MovieGO{
-   max-width: 100px;
-   float: left;
-   margin-right: 60px;
-   border-radius:700px;
+
+#MovieGO {
+    max-width: 100px;
+    float: left;
+    margin-right: 60px;
+    border-radius: 700px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav li {
-    padding: 10px;
-    gap: 1rem;
-    list-style-type: none;
+    padding: 10px 20px;
 }
 
 nav li a {
     text-decoration: none;
     color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-#main_page {
-    transition: color 0.5s ease, transform 0.3s ease;
-}
-#main_page:hover {
-    color: black;
-    transform: scale(.90);
+nav li a:hover {
+    color: #ff007a;
+    transform: scale(1.05);
 }
 
-#blue {
-    transition: color 0.5s ease, transform 0.3s ease;
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    margin-left: auto;
 }
 
-#blue:hover {
-    color: blue;
-    transform: scale(.90);
+/* Media query a nagy képernyőkhöz */
+@media screen and (min-width: 768px) {
+    nav ul {
+        display: flex; /* A menüpontok normál módon jelennek meg */
+    }
+    
+    nav .hamburger {
+        display: none; /* A hamburger menü elrejtése nagy képernyőkön */
+    }
 }
 
-#red {
-    transition: color 0.5s ease, transform 0.3s ease;
-}
-#red:hover {
-    color: red;
-    transform: scale(.90);
-}
+/* Media query a kis képernyőkhöz */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none; /* Elrejtjük a menüpontokat mobil eszközökön */
+        width: 100%;
+        text-align: center;
+    }
 
-#blue_and_white {
-    transition: color 0.5s ease, transform 0.3s ease;
-}
-#blue_and_white:hover {
-    color: rgb(26, 26, 179);
-    transform: scale(.90);
-}
+    nav li {
+        width: 100%;
+        padding: 15px;
+    }
 
-#copyright {
-    transition: color 0.5s ease, transform 0.3s ease;
-}
-#copyright:hover {
-    color: yellow;
-    transform: scale(.90);
-}
+    .hamburger {
+        display: block; /* A hamburger ikont megjelenítjük */
+    }
 
-#purple_and_pink {
-    transition: color 0.5s ease, transform 0.3s ease;
-}
-#purple_and_pink:hover {
-    color: rgb(161, 38, 161);
-    transform: scale(.90);
-}
-
-#pink {
-    transition: color 0.5s ease, transform 0.3s ease;
-}
-#pink:hover {
-    color: pink;
-    transform: scale(.90);
+    nav.open ul {
+        display: block; /* A menüpontok megjelennek a hamburger menü kinyitásakor */
+    }
 }
 
 .buttons button {
@@ -326,20 +327,20 @@ nav li a {
     fill: #ffcc00;
 }
 
-/* Responsive Design - Flexbox */
+/*Reszponzivitás*/
 @media (max-width: 1024px) {
     .card {
-        flex: 1 1 calc(50% - 20px); /* 2 kártya egy sorban */
+        flex: 1 1 calc(50% - 20px); 
     }
 }
 
 @media (max-width: 768px) {
     .card {
-        flex: 1 1 calc(100% - 20px); /* 1 kártya egy sorban */
+        flex: 1 1 calc(100% - 20px); 
     }
 
     header h1 {
-        font-size: 8vw; /* Még kisebb betűk mobil eszközökön */
+        font-size: 8vw; 
     }
 
     .kategoriak {
@@ -347,25 +348,25 @@ nav li a {
     }
 
     .dropdowns {
-        flex-direction: column; /* A dropdownok függőlegesen */
+        flex-direction: column; 
         gap: 10px;
     }
 }
 
-/* Ultra-kisebb képernyők */
 @media (max-width: 480px) {
     .popular-container {
-        padding: 5px; /* Csökkentett padding a legkisebb képernyőkön */
+        padding: 5px; 
     }
 
     header h1 {
-        font-size: 6vw; /* Nagyon kicsi betűk az apró képernyőkön */
+        font-size: 6vw; 
     }
 
     .buttons button {
-        font-size: 0.8rem; /* Kisebb gombok */
+        font-size: 0.8rem;
     }
 }
+
 .shameless {
     object-fit: cover;
 }
