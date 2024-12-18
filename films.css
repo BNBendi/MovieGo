@@ -211,24 +211,24 @@ nav li a {
 .popular-container {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
     padding: 20px;
-    flex-wrap: wrap; /* Az elemek rugalmas elrendezéséhez */
+    flex-wrap: wrap; /* A kártyák összetörése kisebb képernyőkön */
+    width: 100%;
 }
 
+/* Kártyák stílusa */
 .card {
-    position: relative;
     background-color: #333;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     color: #fff;
     transition: transform 0.3s ease;
-    flex: 1 1 calc(33.33% - 20px); /* A kártyák szélességét 33%-ra csökkentjük */
-    max-width: 300px; /* Max szélesség 33%-ra állítva */
-    margin-bottom: 20px; /* Alatta távolságot biztosítunk */
-    
+    flex: 1 1 calc(33.33% - 20px); /* 3 kártya egy sorban alapértelmezetten */
+    max-width: 300px;
+    margin-bottom: 20px;
 }
 
 .card:hover {
@@ -236,9 +236,9 @@ nav li a {
 }
 
 .card img {
+    width: 100%;
     height: auto;
     display: block;
-    width: 100%;
 }
 
 .card-type {
@@ -279,12 +279,12 @@ nav li a {
 }
 
 .card-content {
-    padding: 10px 15px; /* Kisebb belső margó */
+    padding: 10px 15px;
 }
 
 .card-title a {
     color: #fff;
-    font-size: 16px; /* Kisebb cím betűméret */
+    font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -295,7 +295,7 @@ nav li a {
 }
 
 .card_category {
-    font-size: 12px; /* Kisebb szöveg */
+    font-size: 12px;
     color: #aaa;
     display: block;
     margin-top: 5px;
@@ -304,19 +304,19 @@ nav li a {
 .card-rate {
     display: flex;
     align-items: center;
-    font-size: 12px; /* Kisebb betűméret */
+    font-size: 12px;
     color: #ffcc00;
     margin-top: 5px;
 }
 
 .card-rate img.icon {
-    width: 18px; /* Kisebb ikon */
+    width: 18px;
     height: 18px;
     margin-right: 5px;
 }
 
 .card-rate svg.star-icon {
-    width: 12px; /* Kisebb csillag ikon */
+    width: 12px;
     height: 12px;
     fill: #ffd700;
     margin-left: 5px;
@@ -326,6 +326,46 @@ nav li a {
     fill: #ffcc00;
 }
 
+/* Responsive Design - Flexbox */
+@media (max-width: 1024px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* 2 kártya egy sorban */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(100% - 20px); /* 1 kártya egy sorban */
+    }
+
+    header h1 {
+        font-size: 8vw; /* Még kisebb betűk mobil eszközökön */
+    }
+
+    .kategoriak {
+        height: 8vh;
+    }
+
+    .dropdowns {
+        flex-direction: column; /* A dropdownok függőlegesen */
+        gap: 10px;
+    }
+}
+
+/* Ultra-kisebb képernyők */
+@media (max-width: 480px) {
+    .popular-container {
+        padding: 5px; /* Csökkentett padding a legkisebb képernyőkön */
+    }
+
+    header h1 {
+        font-size: 6vw; /* Nagyon kicsi betűk az apró képernyőkön */
+    }
+
+    .buttons button {
+        font-size: 0.8rem; /* Kisebb gombok */
+    }
+}
 .shameless {
     object-fit: cover;
 }
@@ -400,9 +440,7 @@ nav li a {
     display: block;
 }
 
-iframe{
-    margin: 0 auto;
-}
+
 
 
   
