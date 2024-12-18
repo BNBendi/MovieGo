@@ -7,6 +7,315 @@
 body{
     background-color: rgb(0, 0, 0);
 }
+
+/* Navigation */
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(31, 30, 30);
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Állandó árnyék a navbar alatt */
+}
+
+#MovieGO {
+    max-width: 500px;
+    height: 100px;
+    float: left;
+    margin-right: 60px;
+    border-radius: 50%;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    padding: 10px 20px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav li a:hover {
+    color: #ff007a;
+    transform: scale(1.05);
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    margin-left: auto;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+    nav ul {
+        display: flex; /* A menüpontok normál módon jelennek meg */
+    }
+    
+    nav .hamburger {
+        display: none; /* A hamburger menü elrejtése nagy képernyőkön */
+    }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none; /* Elrejtjük a menüpontokat mobil eszközökön */
+        width: 100%;
+        text-align: center;
+    }
+
+    nav li {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .hamburger {
+        display: block; /* A hamburger ikont megjelenítjük */
+    }
+
+    nav.open ul {
+        display: block; /* A menüpontok megjelennek a hamburger menü kinyitásakor */
+    }
+}
+
+/**********/
+/* Main Section */
+main {
+    background-color: black;
+}
+
+main h1 {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+}
+
+main h1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, #ff007a, #ff8a00);
+}
+
+/**********/
+/* Popular Section */
+.popular-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-item {
+    position: relative;
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+}
+
+.card-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Hover árnyék növelése */
+}
+
+.large-card {
+    width: 100%;
+}
+
+.card-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease; /* Kép animáció */
+}
+
+/* .card-item img:hover {
+    transform: scale(1.05); /* Kép nagyítása hoverre 
+} */
+
+.card-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-item:hover .play-button {
+    opacity: 1;
+}
+
+.play-button svg {
+    fill: #fff;
+    width: 24px;
+    height: 24px;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-title a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card-title a:hover {
+    color: #ffcc00; 
+}
+
+.card-category {
+    font-size: 14px;
+    color: #aaa;
+    display: block;
+    margin-top: 5px;
+}
+
+.card-rating {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #ffcc00;
+    margin-top: 10px;
+}
+
+.card-rating img.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.card-rating svg.star-icon {
+    width: 14px;
+    height: 14px;
+    fill: #ffd700;
+    margin-left: 5px;
+}
+
+.card-rating svg.star-icon:hover {
+    fill: #ffcc00;
+}
+
+/* Kép fit */
+.cover-image {
+    object-fit: cover;
+}
+
+/* Buttons */
+.buttons button {
+    padding: 12px 24px;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #6a11cb, #2575fc);
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    margin-right: 8px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.buttons button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease, top 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+.buttons button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(145deg, #ff007a, #ff5f00); /* Élénkebb színek */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);  /* Mélyebb és finomabb árnyék */
+    filter: brightness(1.2);  /* További fényesítés */
+}
+
+.buttons button:active {
+    transform: scale(0.98);  /* Nyomás hatásra összenyomódás */
+    background: linear-gradient(145deg, #ff5f00, #ff007a); /* Invertált színátmenet nyomáskor */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);  /* Erősebb árnyék nyomáskor */
+}
+
+.buttons button:hover:before {
+    width: 100%;
+    top: 100%;
+}
+
+.buttons button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 0, 122, 0.4); /* Fókuszált állapot kiemelése */
+}
+
+/**********/
+/* Animations */
+@keyframes fadeInAnimation {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Card fade-in animation */
+.card-item {
+    animation: fadeInAnimation 1s ease-out;
+}
+
 .weekly-container {
     display: flex;
     flex-direction: column;
@@ -166,20 +475,24 @@ body{
     margin-top: 10px;
     line-height: 1.5;
 }
-.new-upload-container .card-img{
-max-height: 100vh;
- 
+/* A fő képet pozicionáljuk */
+.new-upload-container .card-img {
+    max-height: 100vh;
 }
-/* Ez a új feltötések kártyáé*/
-.card{
+
+/* A kártyák maximális magassága */
+.card {
     max-height: 600px;
 }
-/* Vége */
-.new-upload-container #main-pic{
+
+/* A háttérkép áttetszővé tétele */
+.new-upload-container #main-pic {
     opacity: .5;
     max-height: 100%;
 }
-.new-upload-container h1{
+
+/* Cím pozicionálása */
+.new-upload-container h1.card-title {
     font-size: 24px;
     margin: 0;
     font-weight: bolder;
@@ -187,40 +500,45 @@ max-height: 100vh;
     padding: 10px;
     position: relative;
     color: #fff;
-}
- /* A konténer szülőelem (pl. a card) pozicionálása */
-.new-upload-container {
-    position: relative; /* Ezzel biztosítjuk, hogy a .card-play abszolút pozicionálása a szülő elemhez viszonyítva történjen */
+    text-align: center; /* A szöveg középre igazítása vízszintesen */
+    width: 100%; /* A teljes szélesség kitöltése, hogy biztosan középre legyen */
 }
 
-/* A lejátszó ikon pozicionálása */
+
+/* Az új feltöltések kártyák containerének pozicionálása */
+.new-upload-container {
+    position: relative;
+}
+
+/* Kártyák képei és overlay pozicionálása */
 .card-img-overlay {
-    display: flex; /* Flexbox elrendezés */
-    flex-wrap: wrap; /* Törés, ha a kártyák nem férnek el egy sorban */
-    gap: 20px; /* Távolság a kártyák között */
-    justify-content: center; /* Kártyák középre igazítása */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     padding: 20px;
 }
 
 .card-img-overlay .imiges {
-    flex: 1 1 calc(20% - 100px); /* Rugalmas szélesség, 5 kártya egy sorban */
+    flex: 1 1 calc(20% - 100px); /* 5 kártya egy sorban */
     margin-top: 100px;
-    max-width: calc(20% - 100px); /* 20%-os szélesség */
-    box-sizing: border-box; /* Paddings és border számítása */
-    
+    max-width: calc(20% - 100px);
+    box-sizing: border-box;
 }
 
 .card-img-overlay .imiges .card {
     position: relative;
-    width: 250px; /* Kitölti a rendelkezésre álló területet */
+    width: 250px;
     overflow: hidden;
 }
 
+/* A képek kitöltik a kártyát */
 .card-img-overlay .card img {
-    width: 100%; /* Kép igazítása a kártyán belül */
+    width: 100%;
     border-radius: 5px;
 }
 
+/* Az ikon pozicionálása a kártyán */
 .card-img-overlay .card-play {
     position: absolute;
     top: 50%;
@@ -241,27 +559,32 @@ max-height: 100vh;
     opacity: 1;
 }
 
+/* Az SVG ikon mérete és színe */
 .card-img-overlay .card-play svg {
     fill: #fff;
     width: 24px;
     height: 24px;
 }
 
-/* Ha a képek közötti távolságot nem lehet csökkenteni, próbálj meg eltávolítani minden egyéb margót */
+/* Töröljük a képek közötti távolságokat */
 .imiges img + img {
-    margin-left: 0; 
+    margin-left: 0;
 }
-.section .row{
+
+/* Kártyák színezése és pozicionálása */
+.section .row {
     background-color: #1c1c1c;
 }
-.col12{
-    background-color: #1c1c1c; 
-    color: #fff; 
+
+.col12 {
+    background-color: #1c1c1c;
+    color: #fff;
     padding: 20px;
     text-align: left;
     position: relative;
 }
-.col12::before{
+
+.col12::before {
     content: "";
     position: absolute;
     top: 0;
@@ -270,12 +593,14 @@ max-height: 100vh;
     width: 100%;
     background: linear-gradient(to right, #ff007a, #ff8a00);    
 }
-.col-4 img{
+
+.col-4 img {
     width: 100px;
     border-radius: 50px;
-    margin-left: 10px; ;
+    margin-left: 10px;
     padding-bottom: 10px;
 }
+
 footer {
     width: 100%; /* Teljes szélesség */
     background-color: #1c1c1c; /* Háttérszín */

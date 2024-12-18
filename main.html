@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- MovieGo logoját megy csináltam  BNB -->
-    <link rel="icon" type="image/png" href="img/MovieGo_logo_16x16.png" sizes="32x32"> 
+    <link rel="icon" type="image/png" href="img/MovieGo_logo.png" sizes="32x32"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
     <link rel="stylesheet" href="style.css">
@@ -12,291 +12,431 @@
     <title>MovieGo</title>
 </head>
 <body>
-    <!-- Section header-t megcsináltam BNB -->
-    <div class="section-header">
-        <h2>HETI LEGNÉPSZERŰBB</h2>
+
+    <nav>
+        <li><a href="./main.html" id="main_page"><img src="img/MovieGo_logo.png" alt="MovieGO" id="MovieGO"></a></li>
+        <ul>
+            <li><a href="https://www.paypal.com/hu/home" id="blue">Paypal</a></li>
+            <li><a href="https://www.patreon.com/" id="red">Patreon</a></li>
+            <li><a href="https://discord.com/" id="blue_and_white">Discord</a></li>
+            <li><a href="#" id="copyright">Szerzői jogok</a></li>
+            <li><a href="https://www.facebook.com" id="white">Facebook</a></li>
+            <li><a href="https://www.instagram.com" id="purple_and_pink">Instagram</a></li>
+            <li><a href="./anime.html" id="pink">Anime</a></li>
+            <li><a href="./quiz.html" target="_blank">Film quiz</a></li>
+            <div class="buttons">
+                <a href="./bejelentkezes.html">
+                    <button type="button">Bejelentkezés</button>
+                </a>
+                <a href="./regisztracio.html">
+                    <button type="button">Regisztráció</button>
+                </a>
+            </div>
+        </ul>
+        
+        <!-- Hamburger ikon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+        </div>
+    </nav>
+    
+    
+<main>
+        
+    <h1>Népszerű jelenleg</h1>
+    <div class="popular-section">
+        <div class="card-item large-card">
+            <a href="#"></a>
+            <span class="card-tag">Sorozat</span>
+            <img src="./img/outer_banks.jpg" alt="Outer Banks" class="cover-image">
+            <span class="play-button">
+                <a href="./outer_banks.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
+                    </svg>
+                </a>
+            </span>
+            <div class="card-info">
+                <div class="card-title">
+                    <a href="#">Outer Banks</a>
+                    <span class="card-category">Akció, Krimi, Dráma</span>
+                    <span class="card-rating">
+                        <img class="icon" src="./img/favicon-16x16.png" alt=".">7.5
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff" style="margin-left: 10px; margin-right: 5px;" height="18" viewBox="0 0 24 24">
+                            <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"></path>
+                        </svg>
+                        3315
+                    </span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-item large-card shameless">
+            <a href="#"></a>
+            <span class="card-tag">Sorozat</span>
+            <img src="./img/shameless.jpg" alt="Shameless" class="cover-image">
+            <span class="play-button">
+                <a href="./shameless.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
+                    </svg>
+                </a>
+            </span>
+            <div class="card-info">
+                <div class="card-title">
+                    <a href="#">Szégyentelenek</a>
+                    <span class="card-category">Dráma, Vígjáték</span>
+                    <span class="card-rating">
+                        <img class="icon" src="./img/favicon-16x16.png" alt=".">8.6
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff" style="margin-left: 10px; margin-right: 5px;" height="18" viewBox="0 0 24 24">
+                            <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"></path>
+                        </svg>
+                        1267
+                    </span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-item large-card tulsa-king">
+            <span class="card-tag">Sorozat</span>
+            <img src="./img/Tulsa-kiralya--142365.jpg" alt="Tulsa King" class="cover-image">
+            <span class="play-button">
+                <a href="./tulsa_king.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
+                    </svg>
+                </a>
+            </span>
+            <div class="card-info">
+                <div class="card-title">
+                    <a href="#">Tulsa Királya</a>
+                    <span class="card-category">Bűnügyi, Dráma</span>
+                    <span class="card-rating">
+                        <img class="icon" src="./img/favicon-16x16.png" alt=".">8.0
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff" style="margin-left: 10px; margin-right: 5px;" height="18" viewBox="0 0 24 24">
+                            <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"></path>
+                        </svg>
+                        1836
+                    </span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-item large-card">
+            <span class="card-tag">Sorozat</span>
+            <img src="./img/Vampirnaplok--27119.jpg" alt="The Vampire Diaries" class="cover-image">
+            <span class="play-button">
+                <a href="./vampire_diaries.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
+                    </svg>
+                </a>
+            </span>
+            <div class="card-info">
+                <div class="card-title">
+                    <a href="#">Vámpírnaplók</a>
+                    <span class="card-category">Dráma, Fantasy, Horror</span>
+                    <span class="card-rating">
+                        <img class="icon" src="./img/favicon-16x16.png" alt=".">7.7
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="#fff" style="margin-left: 10px; margin-right: 5px;" height="18" viewBox="0 0 24 24">
+                            <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"></path>
+                        </svg>
+                        2345
+                    </span>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="container">
-        <div class="row">
-            
-            <!-- Javítottam a kártyák svg-jét BNB -->
-            <!-- Card shameless BNB -->
-            <div class="card mb-3 col-md-6 col-sm-12 card-custom">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <span class="card-type">sorozat</span>
-                        <img src="img/shameless.jpg" class="img-fluid rounded-start" alt="shameless">
-                        <span class="card-play">
-                            <a href="shameless.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
-                            </svg></a>
+    
+
+
+
+<!-- Section header-t megcsináltam BNB -->
+<div class="section-header">
+    <h2>HETI LEGNÉPSZERŰBB</h2>
+</div>
+<div class="container">
+    <div class="row">
+        
+        <!-- Javítottam a kártyák svg-jét BNB -->
+        <!-- Card shameless BNB -->
+        <div class="card mb-3 col-md-6 col-sm-12 card-custom">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <span class="card-type">sorozat</span>
+                    <img src="img/shameless.jpg" class="img-fluid rounded-start" alt="shameless">
+                    <span class="card-play">
+                        <a href="shameless.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
+                        </svg></a>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Szégyentelenek</h5>
+                        <span class="card_category">
+                            <a href="#">Dráma</a>
+                            <a href="#">Vígjáték</a>
                         </span>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Szégyentelenek</h5>
-                            <span class="card_category">
-                                <a href="#">Dráma</a>
-                                <a href="#">Vígjáték</a>
-                            </span>
-                            <span class="card-rate">
-                                <img class="icon" src="./img/favicon-16x16.png" alt=".">8.6
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" style="margin-left: 10px; margin-right: 5px;" viewBox="0 0 24 24">
-                                    <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"></path>
-                                </svg>
-                                10598
-                            </span>
-                            <p class="card-text">Az eredeti angol sorozat amerikai változata, melyben egy munkás Chicago-i nagycsalád, Gallagherék szórakoztató mindennapjait követhetjük figyelemmel...</p>
-                        </div>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon-16x16.png" alt=".">8.6
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" style="margin-left: 10px; margin-right: 5px;" viewBox="0 0 24 24">
+                                <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"></path>
+                            </svg>
+                            10598
+                        </span>
+                        <p class="card-text">Az eredeti angol sorozat amerikai változata, melyben egy munkás Chicago-i nagycsalád, Gallagherék szórakoztató mindennapjait követhetjük figyelemmel...</p>
                     </div>
                 </div>
             </div>
-            <!-- Card Outer Banks BNB -->
-            <div class="card mb-3 col-md-6 col-sm-12 card-custom">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <span class="card-type">sorozat</span>
-                        <img src="img/outer_banks.jpg" class="img-fluid rounded-start" alt="outer banks">
+        </div>
+        <!-- Card Outer Banks BNB -->
+        <div class="card mb-3 col-md-6 col-sm-12 card-custom">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <span class="card-type">sorozat</span>
+                    <img src="img/outer_banks.jpg" class="img-fluid rounded-start" alt="outer banks">
+                    <span class="card-play">
+                        <a href="outer_banks.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
+                            </svg>
+                        </a>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Outer Banks</h5>
+                        <span class="card_category">
+                            <a href="#">Akció</a>
+                            <a href="#">Dráma</a>
+                            <a href="#">Krimi</a>
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon-16x16.png" alt=".">7.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" style="margin-left: 10px; margin-right: 5px;" viewBox="0 0 24 24">
+                                <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"></path>
+                            </svg>
+                            98390
+                        </span>
+                        <p class="card-text">Négy fiatal az észak-karolinai Outer Banksben éli a tinédzserek szokványos életét. Az életük gyökeres fordulatot vesz, amikor a környékre lecsap egy pusztító erejű hurrikán, melynek...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card Vámpírnaplók BNB -->
+        <div class="card mb-3 col-md-6 col-sm-12 card-custom">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <span class="card-type">sorozat</span>
+                    <img src="img/Vampirnaplok--27119.jpg" class="img-fluid rounded-start" alt="Vámpírnaplók">
+                    <span class="card-play">
+                       <a href="vampire_desieres">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
+                        </svg>
+                       </a>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Vámpírnaplók</h5>
+                        <span class="card_category">
+                            <a href="#">Dráma</a>
+                            <a href="#">Fantasy</a>
+                            <a href="">Horror</a>
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon-16x16.png" alt=".">7.7
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" style="margin-left: 10px; margin-right: 5px;" viewBox="0 0 24 24">
+                                <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"></path>
+                            </svg>
+                            88864
+                        </span>
+                        <p class="card-text">Stefan Salvatore (Paul Wesley) vámpír. Ezt azonban senki sem sejti a Mystic Falls Gimnáziumban, ahova váratlanul visszatér. Az iskolában beleszeret a gyönyörű Elenába (Nina Dobrev), aki szülei halála óta képtelen magára...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card Tulsa királya  BNB -->
+        <div class="card mb-3 col-md-6 col-sm-12 card-custom">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <span class="card-type">sorozat</span>
+                    <img src="img/Tulsa-kiralya--142365.jpg" class="img-fluid rounded-start" alt="Tulsa királya">
+                    <span class="card-play">
+                       <a href="tulsa_king.html"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
+                    </svg></a>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Tulsa királya</h5>
+                        <span class="card_category">
+                            <a href="#">Dráma</a>
+                            <a href="#">Bűnügyi</a>
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon-16x16.png" alt=".">8.0
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" style="margin-left: 10px; margin-right: 5px;" viewBox="0 0 24 24">
+                                <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"></path>
+                            </svg>
+                            74619
+                        </span>
+                        <p class="card-text">Egy olasz maffiózót követhetünk nyomon, aki azzal a megdöbbentő feladattal szembesül, hogy újjá kell alapítania olasz maffiacsaládját a Missouri állambeli Kansas Cityben.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card Az újonc BNB -->
+        <div class="card mb-3 col-md-6 col-sm-12 card-custom">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <span class="card-type">sorozat</span>
+                    <img src="img/letöltés (1).jfif" class="img-fluid rounded-start" alt="Az újonc">
+                    <span class="card-play">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Az újonc</h5>
+                        <span class="card_category">
+                            <a href="#">Dráma</a>
+                            <a href="#">Krimi</a>
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon-16x16.png" alt=".">8.2
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" style="margin-left: 10px; margin-right: 5px;" viewBox="0 0 24 24">
+                                <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"></path>
+                            </svg>
+                            60775
+                        </span>
+                        <p class="card-text">Az újrakezdés sohasem könnyű, főleg nem a vidékről érkezett John Nolan számára, aki az életét megváltoztató esemény után próbálja megvalósítani álmát, hogy los angelesi rendőr legyen. A rendőrség legidősebb újoncaként a...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card Reacher BNB -->
+        <div class="card mb-3 col-md-6 col-sm-12 card-custom">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <span class="card-type">sorozat</span>
+                    <img src="img/letöltés.jfif" class="img-fluid rounded-start" alt="Reacher">
+                    <span class="card-play">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Reacher</h5>
+                        <span class="card_category">
+                            <a href="">Akció</a>
+                            <a href="#">Dráma</a>
+                            <a href="#">Krimi</a>
+                        </span>
+                        <span class="card-rate">
+                            <img class="icon" src="./img/favicon-16x16.png" alt=".">8.1
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" style="margin-left: 10px; margin-right: 5px;" viewBox="0 0 24 24">
+                                <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"></path>
+                            </svg>
+                            43663
+                        </span>
+                        <p class="card-text">Jack Reacher a katonai rendőrség tagja volt, viszont leszerelése után letartóztatják. A vád gyilkosság, viszont nem ő a tettes. A szálak egy összeesküvéshez vezetnek, korrupcióval, erkölcstelenséggel és zsarolásokkal. Az egyetlen...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="new-upload-container">
+    <div class="row">
+        <div class="card text-bg-dark">
+            <img src="img/wide_interstellar.jpg" class="card-img" alt="interstellar" id="main-pic">
+            <div class="card-img-overlay">
+                <h1 class="card-title">ÚJ FELTÖLTÉSEK</h1>
+                <!-- newupload Imgs -->
+                <div class="imiges">
+                    <div class="card">
+                        <span class="card-type">film</span>
+                        <img src="img/interstellar-smaal.png" alt="interstellar">
                         <span class="card-play">
-                            <a href="outer_banks.html">
+                            <a href="interstellar.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                     <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
                                 </svg>
                             </a>
                         </span>
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Outer Banks</h5>
-                            <span class="card_category">
-                                <a href="#">Akció</a>
-                                <a href="#">Dráma</a>
-                                <a href="#">Krimi</a>
-                            </span>
-                            <span class="card-rate">
-                                <img class="icon" src="./img/favicon-16x16.png" alt=".">7.5
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" style="margin-left: 10px; margin-right: 5px;" viewBox="0 0 24 24">
-                                    <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"></path>
-                                </svg>
-                                98390
-                            </span>
-                            <p class="card-text">Négy fiatal az észak-karolinai Outer Banksben éli a tinédzserek szokványos életét. Az életük gyökeres fordulatot vesz, amikor a környékre lecsap egy pusztító erejű hurrikán, melynek...</p>
-                        </div>
-                    </div>
                 </div>
-            </div>
-            <!-- Card Vámpírnaplók BNB -->
-            <div class="card mb-3 col-md-6 col-sm-12 card-custom">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <span class="card-type">sorozat</span>
-                        <img src="img/Vampirnaplok--27119.jpg" class="img-fluid rounded-start" alt="Vámpírnaplók">
+                <div class="imiges">
+                    <div class="card">
+                        <span class="card-type">film</span>
+                        <img src="img/lastsamurai.png" alt="lastsamurai">
                         <span class="card-play">
-                           <a href="vampire_desieres">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
-                            </svg>
-                           </a>
+                            <a href="lastsamurai.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path></svg>
+                            </a>
                         </span>
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Vámpírnaplók</h5>
-                            <span class="card_category">
-                                <a href="#">Dráma</a>
-                                <a href="#">Fantasy</a>
-                                <a href="">Horror</a>
-                            </span>
-                            <span class="card-rate">
-                                <img class="icon" src="./img/favicon-16x16.png" alt=".">7.7
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" style="margin-left: 10px; margin-right: 5px;" viewBox="0 0 24 24">
-                                    <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"></path>
-                                </svg>
-                                88864
-                            </span>
-                            <p class="card-text">Stefan Salvatore (Paul Wesley) vámpír. Ezt azonban senki sem sejti a Mystic Falls Gimnáziumban, ahova váratlanul visszatér. Az iskolában beleszeret a gyönyörű Elenába (Nina Dobrev), aki szülei halála óta képtelen magára...</p>
-                        </div>
-                    </div>
                 </div>
-            </div>
-            <!-- Card Tulsa királya  BNB -->
-            <div class="card mb-3 col-md-6 col-sm-12 card-custom">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <span class="card-type">sorozat</span>
-                        <img src="img/Tulsa-kiralya--142365.jpg" class="img-fluid rounded-start" alt="Tulsa királya">
+                <div class="imiges">
+                    <div class="card">
+                        <span class="card-type">film</span>
+                        <img src="img/bladerunner.png" alt="bladerunner">
                         <span class="card-play">
-                           <a href="tulsa_king.html"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
-                        </svg></a>
+                            <a href="bladerunner.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1",".71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path></svg>
+                            </a>
                         </span>
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Tulsa királya</h5>
-                            <span class="card_category">
-                                <a href="#">Dráma</a>
-                                <a href="#">Bűnügyi</a>
-                            </span>
-                            <span class="card-rate">
-                                <img class="icon" src="./img/favicon-16x16.png" alt=".">8.0
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" style="margin-left: 10px; margin-right: 5px;" viewBox="0 0 24 24">
-                                    <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"></path>
-                                </svg>
-                                74619
-                            </span>
-                            <p class="card-text">Egy olasz maffiózót követhetünk nyomon, aki azzal a megdöbbentő feladattal szembesül, hogy újjá kell alapítania olasz maffiacsaládját a Missouri állambeli Kansas Cityben.</p>
-                        </div>
-                    </div>
                 </div>
-            </div>
-            <!-- Card Az újonc BNB -->
-            <div class="card mb-3 col-md-6 col-sm-12 card-custom">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <span class="card-type">sorozat</span>
-                        <img src="img/letöltés (1).jfif" class="img-fluid rounded-start" alt="Az újonc">
+                <div class="imiges">
+                    <div class="card">
+                        <span class="card-type">film</span>
+                        <img src="img/Fight_Club.jpg" alt="Fight_Club">
                         <span class="card-play">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
-                            </svg>
+                            <a href="fightclub.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path></svg>
+                            </a>
                         </span>
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Az újonc</h5>
-                            <span class="card_category">
-                                <a href="#">Dráma</a>
-                                <a href="#">Krimi</a>
-                            </span>
-                            <span class="card-rate">
-                                <img class="icon" src="./img/favicon-16x16.png" alt=".">8.2
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" style="margin-left: 10px; margin-right: 5px;" viewBox="0 0 24 24">
-                                    <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"></path>
-                                </svg>
-                                60775
-                            </span>
-                            <p class="card-text">Az újrakezdés sohasem könnyű, főleg nem a vidékről érkezett John Nolan számára, aki az életét megváltoztató esemény után próbálja megvalósítani álmát, hogy los angelesi rendőr legyen. A rendőrség legidősebb újoncaként a...</p>
-                        </div>
-                    </div>
                 </div>
-            </div>
-            <!-- Card Reacher BNB -->
-            <div class="card mb-3 col-md-6 col-sm-12 card-custom">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <span class="card-type">sorozat</span>
-                        <img src="img/letöltés.jfif" class="img-fluid rounded-start" alt="Reacher">
+                <div class="imiges">
+                    <div class="card">
+                        <span class="card-type">film</span>
+                        <img src="img/A_Nagy_Getsbi.png" alt="A_Nagy_Getsbi">
                         <span class="card-play">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
-                            </svg>
+                            <a href="nagygatsby.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path></svg>
+                            </a>
                         </span>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Reacher</h5>
-                            <span class="card_category">
-                                <a href="">Akció</a>
-                                <a href="#">Dráma</a>
-                                <a href="#">Krimi</a>
-                            </span>
-                            <span class="card-rate">
-                                <img class="icon" src="./img/favicon-16x16.png" alt=".">8.1
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" style="margin-left: 10px; margin-right: 5px;" viewBox="0 0 24 24">
-                                    <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"></path>
-                                </svg>
-                                43663
-                            </span>
-                            <p class="card-text">Jack Reacher a katonai rendőrség tagja volt, viszont leszerelése után letartóztatják. A vád gyilkosság, viszont nem ő a tettes. A szálak egy összeesküvéshez vezetnek, korrupcióval, erkölcstelenséggel és zsarolásokkal. Az egyetlen...</p>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="new-upload-container">
-        <div class="row">
-            <div class="card text-bg-dark">
-                <img src="img/wide_interstellar.jpg" class="card-img" alt="interstellar" id="main-pic">
-                <div class="card-img-overlay">
-                    <h1 class="card-title">ÚJ FELTÖLTÉSEK</h1>
-                    <!-- newupload Imgs -->
-                    <div class="imiges">
-                        <div class="card">
-                            <span class="card-type">film</span>
-                            <img src="img/interstellar-smaal.png" alt="interstellar">
-                            <span class="card-play">
-                                <a href="interstellar.html">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
-                                    </svg>
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="imiges">
-                        <div class="card">
-                            <span class="card-type">film</span>
-                            <img src="img/lastsamurai.png" alt="lastsamurai">
-                            <span class="card-play">
-                                <a href="lastsamurai.html">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path></svg>
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="imiges">
-                        <div class="card">
-                            <span class="card-type">film</span>
-                            <img src="img/bladerunner.png" alt="bladerunner">
-                            <span class="card-play">
-                                <a href="bladerunner.html">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path></svg>
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="imiges">
-                        <div class="card">
-                            <span class="card-type">film</span>
-                            <img src="img/Fight_Club.jpg" alt="Fight_Club">
-                            <span class="card-play">
-                                <a href="fightclub.html">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path></svg>
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="imiges">
-                        <div class="card">
-                            <span class="card-type">film</span>
-                            <img src="img/A_Nagy_Getsbi.png" alt="A_Nagy_Getsbi">
-                            <span class="card-play">
-                                <a href="nagygatsby.html">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path></svg>
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
+</div>
+
+<!--Footer BNB-->
+<div class="section">
+    <div class="row">
+        <div class="col12">
+            <h2 class="section_title">Partnereink</h2>
+        </div>
+        <div class="col-4">
+            <a href="https://www.twitch.tv/b3nde3" class="partner" target="_blank">
+                <img src="img/GY9j.png" alt="partner">
+            </a>
         </div>
     </div>
-    <!--Footer BNB-->
-    <div class="section">
-        <div class="row">
-            <div class="col12">
-                <h2 class="section_title">Partnereink</h2>
-            </div>
-            <div class="col-4">
-                <a href="https://www.twitch.tv/b3nde3" class="partner" target="_blank">
-                    <img src="img/GY9j.png" alt="partner">
-                </a>
-            </div>
-        </div>
-    </div>
+</div>
+</main>
     <footer>
         <div class="container">
             <div class="row">
