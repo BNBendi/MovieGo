@@ -99,55 +99,58 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultElement = document.getElementById('result');
     const nextButton = document.getElementById('next-button');
     const submitButton = document.getElementById('submit-button');
-
+    
     // A "Vissza a főoldalra" gomb létrehozása
     const homeButton = document.createElement('button');
     homeButton.textContent = 'Vissza a főoldalra';
     homeButton.style.display = 'none'; 
     document.body.appendChild(homeButton);
 
+    // Következő kérdés betöltése
     function loadNextQuestion() {
         if (currentQuestionIndex >= questions.length) {
             questionText.textContent = 'A kvíz véget ért! Nyertél egy kekszet!';
             answerContainer.innerHTML = '';
             nextButton.style.display = 'none';
             submitButton.style.display = 'none';
+            homeButton.style.display = 'inline-block';  // A gomb megjelenítése
             homeButton.style.display = 'inline-block';
 
-            const img = document.createElement("img");
-            img.src = "./img/cookie.png";
-            img.alt = "keksz";
-            img.style.height = "200px";
-            img.style.width = "200px";
-            questionText.appendChild(img);
-
+            const img = document.createElement("img")
+            img.src = "./img/cookie.png"
+            img.alt = "keksz"
+            img.style.height = "200px"
+            img.style.width = "200px"
+            questionText.appendChild(img)
             return;
         }
-
+    
         const currentQuestion = questions[currentQuestionIndex];
         questionText.textContent = currentQuestion.question;
         answerContainer.innerHTML = '';
-
+    
         currentQuestion.answers.forEach(answer => {
             const label = document.createElement('label');
             label.classList.add('answer-option');
-
+            
             const input = document.createElement('input');
             input.type = 'radio';
             input.name = 'answer';
             input.value = answer;
-
+    
             label.appendChild(input);
             label.appendChild(document.createTextNode(answer));
             answerContainer.appendChild(label);
         });
-
+    
         resultElement.textContent = '';
         resultElement.className = '';
+    
         nextButton.style.display = 'none';
         currentQuestionIndex++;
     }
-
+    
+    // A válaszok letiltása
     function disableAnswerOptions() {
         const inputs = document.querySelectorAll('input[name="answer"]');
         inputs.forEach(input => {
@@ -155,18 +158,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Esemény a válasz beküldésére
     submitButton.addEventListener('click', function () {
         const currentQuestion = questions[currentQuestionIndex - 1];
         const selectedAnswer = document.querySelector('input[name="answer"]:checked');
-
+        
         if (!selectedAnswer) {
             resultElement.textContent = 'Kérlek válassz egy választ!';
             resultElement.className = 'incorrect'; 
             return;
         }
-
+        
         const answerValue = selectedAnswer.value;
-
+        
         if (answerValue === currentQuestion.correct) {
             resultElement.textContent = 'Helyes válasz! ' + currentQuestion.explanation;
             resultElement.className = 'correct';  
@@ -174,20 +178,24 @@ document.addEventListener('DOMContentLoaded', function () {
             resultElement.textContent = 'Hibás válasz! ' + currentQuestion.explanation;
             resultElement.className = 'incorrect';  
         }
+    
 
         disableAnswerOptions();
         nextButton.style.display = 'inline-block';
     });
+    
 
+    // Következő kérdés betöltése
     nextButton.addEventListener('click', function () {
         loadNextQuestion();
-
+        
         const inputs = document.querySelectorAll('input[name="answer"]');
         inputs.forEach(input => {
             input.disabled = false;
         });
     });
 
+    // A főoldalra való visszatérés
     homeButton.addEventListener('click', function () {
         window.location.href = './main.html'; 
     });
