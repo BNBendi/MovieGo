@@ -15,14 +15,15 @@ body {
 
 /**********/
 /*Navbar*/
+/* Alapértelmezett navigáció */
+/* Alapértelmezett navigáció */
 nav {
     position: relative;
-    flex-direction: row;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: rgb(31, 30, 30);
-    padding: 10px 0;
+    padding: 10px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Állandó árnyék a navbar alatt */
 }
 
@@ -33,10 +34,15 @@ nav {
     border-radius: 700px;
 }
 
-nav li {
-    padding: 10px;
-    gap: 1rem;
+nav ul {
+    display: flex;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    padding: 10px 20px;
 }
 
 nav li a {
@@ -51,46 +57,50 @@ nav li a:hover {
     color: #ff007a;
     transform: scale(1.05);
 }
-#main_page, #blue, #red, #blue_and_white, #copyright, #purple_and_pink, #pink,#quiz,#white {
-    transition: color 0.5s ease, transform 0.3s ease;
-    animation: fadeIn 1s ease-out;
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
     color: white;
+    padding: 10px;
+    margin-left: auto;
 }
 
-#main_page:hover {
-    color: black;
-    transform: scale(0.90);
+/* Media query a nagy képernyőkhöz */
+@media screen and (min-width: 768px) {
+    nav ul {
+        display: flex; /* A menüpontok normál módon jelennek meg */
+    }
+    
+    nav .hamburger {
+        display: none; /* A hamburger menü elrejtése nagy képernyőkön */
+    }
 }
 
-#blue:hover {
-    color: blue;
-    transform: scale(0.90);
+/* Media query a kis képernyőkhöz */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none; /* Elrejtjük a menüpontokat mobil eszközökön */
+        width: 100%;
+        text-align: center;
+    }
+
+    nav li {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .hamburger {
+        display: block; /* A hamburger ikont megjelenítjük */
+    }
+
+    nav.open ul {
+        display: block; /* A menüpontok megjelennek a hamburger menü kinyitásakor */
+    }
 }
 
-#red:hover {
-    color: red;
-    transform: scale(0.90);
-}
-
-#blue_and_white:hover {
-    color: rgb(26, 26, 179);
-    transform: scale(0.90);
-}
-
-#copyright:hover {
-    color: yellow;
-    transform: scale(0.90);
-}
-
-#purple_and_pink:hover {
-    color: rgb(161, 38, 161);
-    transform: scale(0.90);
-}
-
-#pink:hover {
-    color: pink;
-    transform: scale(0.90);
-}
 /**********/
 /*Main*/
 main {

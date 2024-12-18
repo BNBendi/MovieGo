@@ -7,28 +7,38 @@
     <title>MovieGO</title>
     <link rel="icon" type="image/png" href="img/MovieGo_logo_16x16.png" sizes="32x32">
     <link rel="stylesheet" href="./style.css">
+    <script src="main.js" defer></script>
 </head>
 
 <body>
     <nav>
         <li><a href="./main.html" id="main_page"><img src="img/movieGo_small.png" alt="MovieGO" id="MovieGO"></a></li>
-        <li><a href="https://www.paypal.com/hu/home" id="blue">Paypal</a></li>
-        <li><a href="https://www.patreon.com/" id="red">Patreon</a></li>
-        <li><a href="https://discord.com/" id="blue_and_white">Discord</a></li>
-        <li><a href="#" id="copyright">Szerzői jogok</a></li>
-        <li><a href="https://www.facebook.com" id="white">Facebook</a></li>
-        <li><a href="https://www.instagram.com" id="purple_and_pink">Instagram</a></li>
-        <li><a href="./anime.html" id="pink">Anime</a></li>
-        <li><a href="./quiz.html" target="_blank">Film quiz</a></li>
-        <div class="buttons">
-            <a href="./bejelentkezes.html">
-                <button type="button">Bejelentkezés</button>
-            </a>
-            <a href="./regisztracio.html">
-                <button type="button">Regisztráció</button>
-            </a>
+        <ul>
+            <li><a href="https://www.paypal.com/hu/home" id="blue">Paypal</a></li>
+            <li><a href="https://www.patreon.com/" id="red">Patreon</a></li>
+            <li><a href="https://discord.com/" id="blue_and_white">Discord</a></li>
+            <li><a href="#" id="copyright">Szerzői jogok</a></li>
+            <li><a href="https://www.facebook.com" id="white">Facebook</a></li>
+            <li><a href="https://www.instagram.com" id="purple_and_pink">Instagram</a></li>
+            <li><a href="./anime.html" id="pink">Anime</a></li>
+            <li><a href="./quiz.html" target="_blank">Film quiz</a></li>
+            <div class="buttons">
+                <a href="./bejelentkezes.html">
+                    <button type="button">Bejelentkezés</button>
+                </a>
+                <a href="./regisztracio.html">
+                    <button type="button">Regisztráció</button>
+                </a>
+            </div>
+        </ul>
+        
+        <!-- Hamburger ikon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
         </div>
     </nav>
+    
+    
     <main>
         <h1>Népszerű jelenleg</h1>
         <div class="popular-container">
