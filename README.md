@@ -43,5 +43,5 @@ Az oldal dizájnja és elrendezése a CSS segítségével van szabályozva, hogy
 A projekt során előforduló kihívások és idegességi pillanatok száma: sok 
 
 Fejlesztési Javaslatok:
-További funkciók hozzáadása, mint például egy film kereső, vagy szavazási lehetőség a felhasználók számára.
-A dizájn finomhangolása a felhasználói élmény javítása érdekében.
+További funkciók hozzáadása, mint például egy film kereső, vagy kvíz a rajongók számára.
+
