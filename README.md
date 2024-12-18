@@ -1,25 +1,47 @@
-# MovieGo
+MovieGo Projekt Dokumentáció
 
-A projekt készítői: Nagy Botond, Bodonyi-Nagy Bendegúz,Takács Ákos
-Téma kitalálói:Bodonyi-Nagy Bendegúz(főképp ő),Nagy Botond
-Alapok:Nagy Botond
-Közreműködő:Takács Ákos(Nem tudtam mit ideírni XD)
-Project elindításának száma: 2(szép volt Takács)
-Inspiráció:https://moviedrive.hu/
-Idegrohamok száma: sok
+Projekt Leírása:
+A MovieGo egy interaktív weboldal, amely lehetőséget biztosít a felhasználóknak filmek és sorozatok felfedezésére, valamint különféle filmekről szóló kérdések megválaszolására. Az oldal célja, hogy szórakoztató módon segítse a filmek és sorozatok világába való betekintést.
 
+Projekt Készítők:
+Nagy Botond
+Bodonyi-Nagy Bendegúz
+Takács Ákos
 
-Az én munkám:
+Alapok és Inspiráció:
+Alapok: Nagy Botond
+Inspiráció: moviedrive.hu
 
--A navbart
--Az alatta lévő 4 kártyát
+Felhasználói Útmutató:
+Film Quiz:
+Ha a felhasználó rákattint a Film Quiz fülre a navigációs sávban, átirányításra kerül egy új oldalra, ahol különböző, érdekes és szórakoztató kérdések várják.
 
-Felhasználói útmutató:
--Film quiz: Ha rányom a felhasználó a "Film quiz" fülre,akkor átirányítja egy oldalra,és válhaszolhat pár csodálatos és nagyszerű kérdésre.
--A kártyákon lévő gomb: Ha rányom a felhasználó,akkor átirányítja őt egy oldalra,ahol a nagyszerű sorozatokat udja megtekinteni.Fontos,csak akkor tudsz átmenni a másik oldalra,hogya a gombra kattintasz,máshogy nem működik.
+Kártyák és Gombok:
+Az oldalon található 4 kártya mindegyike egy-egy különböző funkciót szolgál.
 
-Felépítés:
-main.html : Ebben van minden lényeges: a navbar és a 4 kártya,és azokon belül minden más(nem részletezek mindent mert akkor megőszülnék :))
+Ha a felhasználó rákattint egy kártyán található gombra, átirányítja őt egy másik oldalra, ahol különböző sorozatok tekinthetők meg.
+Fontos, hogy a felhasználó csak akkor tudja elérni a másik oldalt, ha a gombra kattint.
+Főbb Funkciók:
+Navbar:
+Az oldal tetején található navigációs sáv (navbar) biztosítja a könnyű navigációt az oldalon belül. A felhasználók a következő fülre kattinthatnak:
 
-Főbb funkciók:
-A js-ek
+Film Quiz: A kérdések oldalra navigál.
+További funkciók: Egyéb kártyák, gombok és lehetőségek a sorozatok böngészésére.
+4 Kártya:
+Az oldal központi részén található 4 kártya, melyek mindegyike egy különböző témát és funkcionalitást tartalmaz.
+
+Kártyák: Minden kártya tartalmaz egy gombot, amely az adott témával kapcsolatos oldalra irányítja a felhasználót.
+Kártyák használata: A felhasználók interakcióba léphetnek a gombokkal, hogy a kívánt oldalra navigáljanak.
+Technikai Leírás:
+
+Az oldal felépítése a main.html fájlban található, amely tartalmazza a navbar-t és a 4 kártyát, valamint a hozzájuk tartozó gombokat és funkciókat.
+
+A JavaScript segítségével biztosítjuk a dinamikus működést, például a gombok működését és az átirányítást a megfelelő oldalakra.
+
+Az oldal dizájnja és elrendezése a CSS segítségével van szabályozva, hogy felhasználóbarát és vizuálisan vonzó legyen.
+
+A projekt során előforduló kihívások és idegességi pillanatok száma: sok 
+
+Fejlesztési Javaslatok:
+További funkciók hozzáadása, mint például egy film kereső, vagy szavazási lehetőség a felhasználók számára.
+A dizájn finomhangolása a felhasználói élmény javítása érdekében.
