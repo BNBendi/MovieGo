@@ -19,6 +19,5 @@ Felépítés
 
 
 Főbb funkciók:
-- handleDropdownSelection() Ez a dropdown opciók értékét kéri be kattintásra
+- handleDropdownSelection() Ez a dropdown opciók értékét kéri be kattintásra, itt van benne a callback is ami meghivja a 
 - filterMovies() a kiválasztott műfajt vagy típust olvassa be és az alapjan jeleníti meg a filmeket
-- 

@@ -66,6 +66,7 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .poster {
@@ -95,6 +96,7 @@ body {
 
 .trailer {
     margin-top: 20px;
+    margin: auto;
 }
 
 .trailer iframe {
@@ -107,6 +109,8 @@ body {
     margin-top: 20px;
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .season, .season>a{
@@ -123,4 +127,70 @@ body {
 
 .season:hover {
     transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .poster {
+        margin: 0 auto 20px;
+        max-width: 150px;
+    }
+
+    .details {
+        text-align: center;
+    }
+
+    .trailer iframe {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    #MovieGO {
+        margin: 0 auto 20px;
+    }
+
+    nav li {
+        padding: 5px;
+    }
+
+    .trailer iframe {
+        height: 300px;
+    }
+
+    .season-buttons {
+        flex-direction: column;
+    }
+
+    .season {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .details h1 {
+        font-size: 1.5rem;
+    }
+
+    .details p {
+        font-size: 0.9rem;
+    }
+
+    .rating {
+        font-size: 1rem;
+    }
+
+    .trailer iframe {
+        height: 250px;
+    }
 }
